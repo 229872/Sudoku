@@ -1,8 +1,12 @@
 package pl.component.model;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import pl.component.exceptions.WrongValueException;
 
-import java.util.*;
 
 public class SudokuBoard {
     private final int[] board = new int[81];
@@ -14,7 +18,7 @@ public class SudokuBoard {
     }
 
     public int getFieldValue(int row, int col) throws WrongValueException {
-        if(row >= 0 && row < getBoardSize() && col >= 0 && col < getBoardSize()) {
+        if (row >= 0 && row < getBoardSize() && col >= 0 && col < getBoardSize()) {
             return board[getBoardSize() * row + col];
         } else {
             throw new WrongValueException("Wrong row or column");
@@ -45,9 +49,9 @@ public class SudokuBoard {
     }
 
     private boolean validateBoard(int[] board) {
-        return validateRows(board) &&
-                validateColumns(board) &&
-                validateRectangles(board);
+        return validateRows(board)
+                && validateColumns(board)
+                && validateRectangles(board);
     }
 
     private boolean validateRows(int[] board) {
@@ -56,7 +60,7 @@ public class SudokuBoard {
             for (int j = 0; j < getBoardSize(); j++) {
                 row[j] = board[getBoardSize() * i + j];
             }
-            if(!verify(row)) {
+            if (!verify(row)) {
                 return false;
             }
         }
@@ -69,7 +73,7 @@ public class SudokuBoard {
             for (int j = 0; j < getBoardSize(); j++) {
                 col[j] = board[getBoardSize() * j + i];
             }
-            if(!verify(col)) {
+            if (!verify(col)) {
                 return false;
             }
         }
@@ -79,7 +83,7 @@ public class SudokuBoard {
     private boolean validateRectangles(int[] board) {
         for (int i = 0; i < getBoardSize(); i += 3) {
             for (int j = 0; j < getBoardSize(); j += 3) {
-                if(!checkRectangle(board,i,j)) {
+                if (!checkRectangle(board,i,j)) {
                     return false;
                 }
             }
@@ -103,7 +107,7 @@ public class SudokuBoard {
         Set<Integer> checker = new HashSet<>(9);
         int zerosCounter = 0;
         for (int value : values) {
-            if(value != 0) {
+            if (value != 0) {
                 checker.add(value);
             } else {
                 zerosCounter++;
