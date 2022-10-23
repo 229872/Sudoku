@@ -1,54 +1,64 @@
 package pl.component.model;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import pl.component.exceptions.WrongValueException;
+import pl.component.model.algorithm.SudokuSolver;
 
 
 public class SudokuBoard {
     private final int[] board = new int[81];
+    SudokuSolver sudokuSolver;
 
-    public void fillBoard() {
-        List<Integer> randomNumbers = Arrays.asList(1,2,3,4,5,6,7,8,9);
-        Collections.shuffle(randomNumbers);
-        solve(this.board, randomNumbers);
+    public SudokuBoard(SudokuSolver sudokuSolver) {
+        this.sudokuSolver = sudokuSolver;
     }
 
-    public int getFieldValue(int row, int col) throws WrongValueException {
-        if (row >= 0 && row < getBoardSize() && col >= 0 && col < getBoardSize()) {
-            return board[getBoardSize() * row + col];
+    public void solveGame() {
+        sudokuSolver.solve(this);
+    }
+
+    public int get(int x, int y) throws WrongValueException {
+        if (y >= 0 && y < getBoardSize() && x >= 0 && x < getBoardSize()) {
+            return board[getBoardSize() * y + x];
         } else {
             throw new WrongValueException("Wrong row or column");
         }
     }
 
-    private int getBoardSize() {
+    public void set(int x, int y, int value) throws WrongValueException {
+        if (y < 0 || y >= getBoardSize()) {
+            throw new WrongValueException("Wrong row, row index too small or too high");
+        }
+        if (x < 0 || x >= getBoardSize()) {
+            throw new WrongValueException("Wrong column, column index too small or too high");
+        }
+        if (value >= 0 && value <= getBoardSize()) {
+            board[getBoardSize() * y + x] = value;
+        } else {
+            throw new WrongValueException("Wrong value, value too small or too high");
+        }
+    }
+
+    public int getBoardSize() {
         return board.length / 9;
     }
 
-    private boolean solve(int[] board, List<Integer> randomNumbers) {
 
-        for (int row = 0; row < getBoardSize(); row++) {
-            for (int column = 0; column < getBoardSize(); column++) {
-                if (board[getBoardSize() * row + column] == 0) {
-                    for (Integer k : randomNumbers) {
-                        board[getBoardSize() * row + column] = k;
-                        if (validateBoard(board) && solve(board, randomNumbers)) {
-                            return true;
-                        }
-                        board[getBoardSize() * row + column] = 0;
-                    }
-                    return false;
-                }
+
+    public boolean validateBoard(SudokuBoard sudokuBoard) throws WrongValueException {
+        int[] board = new int[81];
+        int boardSize = sudokuBoard.getBoardSize();
+
+        int k = 0;
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
+                board[k] = sudokuBoard.get(j, i);
+                k++;
             }
         }
-        return true;
-    }
 
-    private boolean validateBoard(int[] board) {
         return validateRows(board)
                 && validateColumns(board)
                 && validateRectangles(board);
@@ -118,8 +128,12 @@ public class SudokuBoard {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SudokuBoard that = (SudokuBoard) o;
         return Arrays.equals(board, that.board);
     }
