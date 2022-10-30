@@ -1,9 +1,8 @@
 package pl.component.model.elements;
 
+import java.util.List;
 import pl.component.model.SudokuElement;
 import pl.component.model.SudokuField;
-
-import java.util.List;
 
 public class SudokuColumn extends SudokuElement {
 

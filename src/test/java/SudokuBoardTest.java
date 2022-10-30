@@ -3,6 +3,8 @@ import pl.component.exceptions.WrongValueException;
 import pl.component.model.SudokuBoard;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -141,6 +143,27 @@ public class SudokuBoardTest {
         board1.solveGame();
         board2.solveGame();
         assertNotEquals(board1.hashCode(), board2.hashCode());
+    }
+
+    @Test
+    public void listenerTest() {
+        ByteArrayOutputStream byteArray = new ByteArrayOutputStream();
+        PrintStream out = new PrintStream(byteArray);
+        PrintStream old = System.out;
+        System.setOut(out);
+
+        board1.setVerified(true);
+        try {
+            board1.set(0, 0, 3);
+            board1.set(1, 0, 4);
+            board1.set(0, 1, 5);
+            assertEquals("", byteArray.toString());
+            board1.set(3, 0, 3);
+            assertEquals("Wrong value: 3\n", byteArray.toString());
+        } catch (WrongValueException e) {
+            throw new RuntimeException(e);
+        }
+        System.setOut(old);
     }
 
 

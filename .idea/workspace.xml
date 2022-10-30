@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/SudokuElementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SudokuFieldTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SudokuRowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/elements/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/elements/SudokuBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/elements/SudokuColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/elements/SudokuColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/elements/SudokuRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/elements/SudokuRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuBoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +69,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in mkw_czw_1545_04">
+  <component name="RunManager" selected="Application.SudokuBoard">
     <configuration name="SudokuBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.component.model.SudokuBoard" />
       <module name="mkw_czw_1545_04" />
@@ -92,22 +101,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardTest.set_WrongColumnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SudokuBoardTest.listenerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mkw_czw_1545_04" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="METHOD_NAME" value="set_WrongColumnTest" />
+      <option name="METHOD_NAME" value="listenerTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardTest.set_WrongRowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SudokuFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mkw_czw_1545_04" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="METHOD_NAME" value="set_WrongRowTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="SudokuFieldTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,18 +146,18 @@
     <list>
       <item itemvalue="Application.SudokuBoard" />
       <item itemvalue="JUnit.SudokuBoardTest.fillBoardTest" />
-      <item itemvalue="JUnit.SudokuBoardTest.set_WrongColumnTest" />
-      <item itemvalue="JUnit.SudokuBoardTest.set_WrongRowTest" />
+      <item itemvalue="JUnit.SudokuBoardTest.listenerTest" />
+      <item itemvalue="JUnit.SudokuFieldTest" />
       <item itemvalue="JUnit.All in mkw_czw_1545_04" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in mkw_czw_1545_04" />
         <item itemvalue="Application.SudokuBoard" />
+        <item itemvalue="JUnit.All in mkw_czw_1545_04" />
+        <item itemvalue="JUnit.SudokuBoardTest.listenerTest" />
+        <item itemvalue="JUnit.SudokuFieldTest" />
         <item itemvalue="JUnit.SudokuBoardTest.fillBoardTest" />
-        <item itemvalue="JUnit.SudokuBoardTest.set_WrongColumnTest" />
-        <item itemvalue="JUnit.SudokuBoardTest.set_WrongRowTest" />
       </list>
     </recent_temporary>
   </component>
