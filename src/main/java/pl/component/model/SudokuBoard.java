@@ -2,6 +2,7 @@ package pl.component.model;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.algorithm.SudokuSolver;
@@ -9,9 +10,10 @@ import pl.component.model.algorithm.SudokuSolver;
 
 public class SudokuBoard {
     private final int[] board = new int[81];
-    SudokuSolver sudokuSolver;
+    private SudokuSolver sudokuSolver;
 
     public SudokuBoard(SudokuSolver sudokuSolver) {
+        Objects.requireNonNull(sudokuSolver);
         this.sudokuSolver = sudokuSolver;
     }
 

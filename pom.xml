@@ -109,6 +109,16 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.15.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.1.1</version>
             </plugin>
@@ -143,6 +153,16 @@
             </plugin>
         </plugins>
     </reporting>
+
+    <developers>
+        <developer>
+            <id>229872</id>
+            <name>Bartłomiej Dygasiński</name>
+            <email>229872@edu.p.lodz.pl</email>
+        </developer>
+    </developers>
+
+    <description>Projekt grupy laboratoryjnej mkw_czw_1545_04</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

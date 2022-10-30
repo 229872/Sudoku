@@ -37,7 +37,7 @@ public class SudokuBoardTest {
                 () -> board.get(-1,0));
         WrongValueException exception =
                 assertThrows(WrongValueException.class,
-                () -> board.get(10, 0));
+                () -> board.get(9, 0));
         assertEquals("Wrong row or column", exception.getMessage());
     }
 
@@ -49,7 +49,7 @@ public class SudokuBoardTest {
                 () -> board.get(0,-1));
         WrongValueException exception =
                 assertThrows(WrongValueException.class,
-                        () -> board.get(0, 10));
+                        () -> board.get(0, 9));
         assertEquals("Wrong row or column", exception.getMessage());
     }
 
@@ -59,6 +59,7 @@ public class SudokuBoardTest {
 
         try {
             assertEquals(0, board.get(0,0));
+            assertEquals(0, board.get(8, 8));
         } catch (WrongValueException ignored) {
 
         }
@@ -77,7 +78,7 @@ public class SudokuBoardTest {
 
         WrongValueException exception2 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(0, 10, 0));
+                        () -> board.set(0, 9, 0));
 
         assertEquals(message, exception2.getMessage());
     }
@@ -95,7 +96,7 @@ public class SudokuBoardTest {
 
         WrongValueException exception2 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(10, 0, 0));
+                        () -> board.set(9, 0, 0));
 
         assertEquals(message, exception2.getMessage());
     }
