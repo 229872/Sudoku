@@ -27,7 +27,10 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                 if (board.get(column, row) == 0) {
                     for (Integer k : randomNumbers) {
                         board.set(column, row, k);
-                        if (board.validateBoard(board) && solveBoard(board)) {
+                        boolean validationResult = board.getRow(row).verify()
+                                && board.getColumn(column).verify()
+                                && board.getBox(column, row).verify();
+                        if (validationResult && solveBoard(board)) {
                             return true;
                         }
                         board.set(column, row, 0);

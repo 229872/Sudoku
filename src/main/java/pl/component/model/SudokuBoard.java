@@ -3,6 +3,7 @@ package pl.component.model;
 import java.util.*;
 
 import pl.component.exceptions.WrongValueException;
+import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.algorithm.SudokuSolver;
 import pl.component.model.elements.SudokuBox;
 import pl.component.model.elements.SudokuColumn;
@@ -10,12 +11,16 @@ import pl.component.model.elements.SudokuRow;
 
 
 public class SudokuBoard {
-    private final List<SudokuField> board = new ArrayList<>();
+    private final List<SudokuField> board;
     private SudokuSolver sudokuSolver;
 
     public SudokuBoard(SudokuSolver sudokuSolver) {
         Objects.requireNonNull(sudokuSolver);
         this.sudokuSolver = sudokuSolver;
+        this.board = Arrays.asList(new SudokuField[81]);
+        for (int i = 0; i < 81; i++) {
+            board.set(i, new SudokuField(0));
+        }
     }
 
     public int get(int x, int y) throws WrongValueException {
