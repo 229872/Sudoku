@@ -4,6 +4,9 @@ import java.util.*;
 
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.algorithm.SudokuSolver;
+import pl.component.model.elements.SudokuBox;
+import pl.component.model.elements.SudokuColumn;
+import pl.component.model.elements.SudokuRow;
 
 
 public class SudokuBoard {
@@ -13,10 +16,6 @@ public class SudokuBoard {
     public SudokuBoard(SudokuSolver sudokuSolver) {
         Objects.requireNonNull(sudokuSolver);
         this.sudokuSolver = sudokuSolver;
-    }
-
-    public void solveGame() {
-        sudokuSolver.solve(this);
     }
 
     public int get(int x, int y) throws WrongValueException {
@@ -41,59 +40,18 @@ public class SudokuBoard {
         }
     }
 
-    public int getBoardSize() {
-        return board.size() / 9;
-    }
-
-
-
-    public boolean validateBoard(SudokuBoard sudokuBoard) throws WrongValueException {
-        int[] board = new int[81];
-        int boardSize = sudokuBoard.getBoardSize();
-
-        int k = 0;
-        for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
-                board[k] = sudokuBoard.get(j, i);
-                k++;
-            }
-        }
-
-        return validateRows(board)
-                && validateColumns(board)
-                && validateRectangles(board);
-    }
-
-    private boolean validateRows(int[] board) {
+    private boolean checkBoard() {
         for (int i = 0; i < getBoardSize(); i++) {
-            int[] row = new int[getBoardSize()];
-            for (int j = 0; j < getBoardSize(); j++) {
-                row[j] = board[getBoardSize() * i + j];
+            if (!getRow(i).verify()) {
+                return false;
             }
-            if (!verify(row)) {
+            if (!getColumn(i).verify()) {
                 return false;
             }
         }
-        return true;
-    }
-
-    private boolean validateColumns(int[] board) {
-        for (int i = 0; i < getBoardSize(); i++) {
-            int[] col = new int[getBoardSize()];
-            for (int j = 0; j < getBoardSize(); j++) {
-                col[j] = board[getBoardSize() * j + i];
-            }
-            if (!verify(col)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean validateRectangles(int[] board) {
         for (int i = 0; i < getBoardSize(); i += 3) {
             for (int j = 0; j < getBoardSize(); j += 3) {
-                if (!checkRectangle(board,i,j)) {
+                if(!getBox(j, i).verify()) {
                     return false;
                 }
             }
@@ -101,33 +59,49 @@ public class SudokuBoard {
         return true;
     }
 
-    private boolean checkRectangle(int[] board, int row, int col) {
-        int[] data = new int[getBoardSize()];
-        int k = 0;
-        for (int i = row; i < row + 3; i++) {
-            for (int j = col; j < col + 3; j++) {
-                data[k] = board[getBoardSize() * i + j];
-                k++;
-            }
-        }
-        return verify(data);
+    public SudokuRow getRow(int y) {
+        return new SudokuRow(board.subList(getBoardSize() * y, getBoardSize() * y + getBoardSize()));
     }
 
+    public SudokuColumn getColumn(int x) {
+        List<SudokuField> column = new ArrayList<>(getBoardSize());
+        for (int i = 0; i < getBoardSize(); i++) {
+            column.add(new SudokuField(board.get(getBoardSize() * i + x).getFieldValue()));
+        }
+        return new SudokuColumn(column);
+    }
+
+    public SudokuBox getBox(int x, int y) {
+        int column = x - x % 3;
+        int row = y - y % 3;
+        int k = 0;
+        List<SudokuField> box = new ArrayList<>(getBoardSize());
+        for (int i = row; i < row + 3; i++) {
+            for (int j = column; j < column + 3; j++, k++) {
+                box.add(new SudokuField(board.get(getBoardSize() * i + j).getFieldValue()));
+            }
+        }
+        return new SudokuBox(box);
+    }
+
+    public void solveGame() {
+        sudokuSolver.solve(this);
+    }
+
+    public int getBoardSize() {
+        return board.size() / 9;
+    }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        SudokuBoard that = (SudokuBoard) o;
-        return Arrays.equals(board, that.board);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SudokuBoard board1 = (SudokuBoard) o;
+        return Objects.equals(board, board1.board);
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(board);
+        return Objects.hash(board);
     }
 }

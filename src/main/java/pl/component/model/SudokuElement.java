@@ -1,9 +1,6 @@
 package pl.component.model;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public abstract class SudokuElement {
     private final List<SudokuField> fields;
@@ -13,7 +10,7 @@ public abstract class SudokuElement {
     }
 
 
-    private boolean verify() {
+    public boolean verify() {
         Set<Integer> checker = new HashSet<>(9);
         int zerosCounter = 0;
         for (SudokuField value : fields) {
@@ -24,5 +21,18 @@ public abstract class SudokuElement {
             }
         }
         return checker.size() == fields.size() - zerosCounter;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SudokuElement that = (SudokuElement) o;
+        return Objects.equals(fields, that.fields);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fields);
     }
 }
