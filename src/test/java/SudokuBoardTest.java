@@ -9,57 +9,51 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SudokuBoardTest {
+    private final SudokuBoard board1 = new SudokuBoard(new BacktrackingSudokuSolver());
+    private final SudokuBoard board2 = new SudokuBoard(new BacktrackingSudokuSolver());
 
     @Test
     public void fillBoardTest() throws WrongValueException {
-        SudokuBoard sudokuBoard = new SudokuBoard(new BacktrackingSudokuSolver());
-        sudokuBoard.solveGame();
+        board1.solveGame();
 
-        assertTrue(SudokuBoardTestHelper.validateBoard(sudokuBoard));
+        assertTrue(SudokuBoardTestHelper.validateBoard(board1));
     }
 
     @Test
     public void fillBoardDifferentlyTest() {
-        SudokuBoard board1 = new SudokuBoard(new BacktrackingSudokuSolver());
-        SudokuBoard board2 = new SudokuBoard(new BacktrackingSudokuSolver());
-
         board1.solveGame();
         board2.solveGame();
 
-        assertNotEquals(board1,board2);
+        assertNotEquals(board1, board2);
     }
 
     @Test
     public void get_WrongColumnTest() {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
 
         assertThrows(WrongValueException.class,
-                () -> board.get(-1,0));
+                () -> board1.get(-1,0));
         WrongValueException exception =
                 assertThrows(WrongValueException.class,
-                () -> board.get(9, 0));
+                () -> board1.get(9, 0));
         assertEquals("Wrong row or column", exception.getMessage());
     }
 
     @Test
     public void get_WrongRowTest() {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
 
         assertThrows(WrongValueException.class,
-                () -> board.get(0,-1));
+                () -> board1.get(0,-1));
         WrongValueException exception =
                 assertThrows(WrongValueException.class,
-                        () -> board.get(0, 9));
+                        () -> board1.get(0, 9));
         assertEquals("Wrong row or column", exception.getMessage());
     }
 
     @Test
     public void get_PositiveTest() {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
-
         try {
-            assertEquals(0, board.get(0,0));
-            assertEquals(0, board.get(8, 8));
+            assertEquals(0, board1.get(0,0));
+            assertEquals(0, board1.get(8, 8));
         } catch (WrongValueException ignored) {
 
         }
@@ -67,79 +61,69 @@ public class SudokuBoardTest {
 
     @Test
     public void set_WrongRowTest() {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
 
         WrongValueException exception1 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(0, -1, 0));
+                        () -> board1.set(0, -1, 0));
         String message = "Wrong row, row index too small or too high";
 
         assertEquals(message, exception1.getMessage());
 
         WrongValueException exception2 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(0, 9, 0));
+                        () -> board1.set(0, 9, 0));
 
         assertEquals(message, exception2.getMessage());
     }
 
     @Test
     public void set_WrongColumnTest() {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
 
         WrongValueException exception1 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(-1, 0, 0));
+                        () -> board1.set(-1, 0, 0));
         String message = "Wrong column, column index too small or too high";
 
         assertEquals(message, exception1.getMessage());
 
         WrongValueException exception2 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(9, 0, 0));
+                        () -> board1.set(9, 0, 0));
 
         assertEquals(message, exception2.getMessage());
     }
 
     @Test
     public void set_WrongValueTest() {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
 
         WrongValueException exception1 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(0, 0, -1));
+                        () -> board1.set(0, 0, -1));
         String message = "Wrong value, value too small or too high";
 
         assertEquals(message, exception1.getMessage());
 
         WrongValueException exception2 =
                 assertThrows(WrongValueException.class,
-                        () -> board.set(0, 0, 10));
+                        () -> board1.set(0, 0, 10));
 
         assertEquals(message, exception2.getMessage());
     }
 
     @Test
     public void set_PositiveLowerBoundTest() throws WrongValueException {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
-
-        board.set(0, 0, 0);
-        assertEquals(0, board.get(0, 0));
+        board1.set(0, 0, 0);
+        assertEquals(0, board1.get(0, 0));
     }
 
     @Test
     public void set_PositiveUpperBoundTest() throws WrongValueException {
-        SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
-
-        board.set(8, 8, 9);
-        assertEquals(9, board.get(8, 8));
+        board1.set(8, 8, 9);
+        assertEquals(9, board1.get(8, 8));
     }
 
     @Test
     public void equalsTest() throws WrongValueException {
-        SudokuBoard board1 = new SudokuBoard(new BacktrackingSudokuSolver());
-        SudokuBoard board2 = new SudokuBoard(new BacktrackingSudokuSolver());
-
         assertFalse(board1.equals(null));
         assertFalse(board1.equals(String.class));
         assertEquals(board1, board1);
@@ -153,9 +137,6 @@ public class SudokuBoardTest {
 
     @Test
     public void hashCodeTest() {
-        SudokuBoard board1 = new SudokuBoard(new BacktrackingSudokuSolver());
-        SudokuBoard board2 = new SudokuBoard(new BacktrackingSudokuSolver());
-
         assertEquals(board1.hashCode(), board2.hashCode());
         board1.solveGame();
         board2.solveGame();

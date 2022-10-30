@@ -13,7 +13,7 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
     public void solve(SudokuBoard board) {
         try {
             solveBoard(board);
-        } catch (WrongValueException e) {
+        } catch (WrongValueException ignored) {
             // do nothing
         }
     }

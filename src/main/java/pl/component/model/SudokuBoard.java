@@ -1,15 +1,13 @@
 package pl.component.model;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.algorithm.SudokuSolver;
 
 
 public class SudokuBoard {
-    private final int[] board = new int[81];
+    private final List<SudokuField> board = new ArrayList<>();
     private SudokuSolver sudokuSolver;
 
     public SudokuBoard(SudokuSolver sudokuSolver) {
@@ -23,7 +21,7 @@ public class SudokuBoard {
 
     public int get(int x, int y) throws WrongValueException {
         if (y >= 0 && y < getBoardSize() && x >= 0 && x < getBoardSize()) {
-            return board[getBoardSize() * y + x];
+            return board.get(getBoardSize() * y + x).getFieldValue();
         } else {
             throw new WrongValueException("Wrong row or column");
         }
@@ -37,14 +35,14 @@ public class SudokuBoard {
             throw new WrongValueException("Wrong column, column index too small or too high");
         }
         if (value >= 0 && value <= getBoardSize()) {
-            board[getBoardSize() * y + x] = value;
+            board.get(getBoardSize() * y + x).setFieldValue(value);
         } else {
             throw new WrongValueException("Wrong value, value too small or too high");
         }
     }
 
     public int getBoardSize() {
-        return board.length / 9;
+        return board.size() / 9;
     }
 
 
@@ -115,18 +113,6 @@ public class SudokuBoard {
         return verify(data);
     }
 
-    private boolean verify(int[] values) {
-        Set<Integer> checker = new HashSet<>(9);
-        int zerosCounter = 0;
-        for (int value : values) {
-            if (value != 0) {
-                checker.add(value);
-            } else {
-                zerosCounter++;
-            }
-        }
-        return checker.size() == values.length - zerosCounter;
-    }
 
     @Override
     public boolean equals(Object o) {
