@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/SudokuBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,8 +145,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SudokuBoardTest.listenerTest" />
-        <item itemvalue="Application.SudokuBoard" />
         <item itemvalue="JUnit.All in mkw_czw_1545_04" />
+        <item itemvalue="Application.SudokuBoard" />
         <item itemvalue="JUnit.SudokuFieldTest" />
         <item itemvalue="JUnit.SudokuBoardTest.fillBoardTest" />
       </list>

@@ -128,7 +128,7 @@ public class SudokuBoard implements PropertyChangeListener {
     @Override
     public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
         if (!checkBoard() && isVerified) {
-            System.out.println("Wrong value: " + propertyChangeEvent.getNewValue());
+            throw new RuntimeException("Wrong value: " + propertyChangeEvent.getNewValue());
         }
     }
 }
