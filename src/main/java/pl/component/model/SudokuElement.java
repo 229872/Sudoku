@@ -2,8 +2,11 @@ package pl.component.model;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 
 public abstract class SudokuElement {
     private final List<SudokuField> fields;
@@ -31,15 +34,25 @@ public abstract class SudokuElement {
         if (this == o) {
             return true;
         }
+
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
+
         SudokuElement that = (SudokuElement) o;
-        return Objects.equals(fields, that.fields);
+
+        return new EqualsBuilder().append(fields, that.fields).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(fields);
+        return new HashCodeBuilder(17, 37).append(fields).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("fields", fields)
+                .toString();
     }
 }

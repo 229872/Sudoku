@@ -146,6 +146,12 @@ public class SudokuBoardTest {
     }
 
     @Test
+    public void toStringTest() {
+        String expected = "pl.component.model.SudokuBoard";
+        assertTrue(board1.toString().startsWith(expected));
+    }
+
+    @Test
     public void listenerTest() {
 
         board1.setVerified(true);

@@ -41,4 +41,12 @@ public class SudokuElementTest {
 
         assertNotEquals(board.getRow(0), board.getRow(1));
     }
+
+    @Test
+    public void toStringTest() {
+        String expected = "pl.component.model.elements.";
+        assertTrue(board.getBox(0, 0).toString().startsWith(expected + "SudokuBox"));
+        assertTrue(board.getRow(0).toString().startsWith(expected + "SudokuRow"));
+        assertTrue(board.getColumn(0).toString().startsWith(expected + "SudokuColumn"));
+    }
 }

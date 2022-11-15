@@ -24,4 +24,10 @@ public class SudokuFieldTest {
         field1.setFieldValue(1);
         assertNotEquals(field1, field2);
     }
+
+    @Test
+    public void toStringTest() {
+        String expected = "[value=0]";
+        assertTrue(field1.toString().contains(expected));
+    }
 }

@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.algorithm.SudokuSolver;
 import pl.component.model.elements.SudokuBox;
@@ -90,10 +93,9 @@ public class SudokuBoard implements PropertyChangeListener {
     public SudokuBox getBox(int x, int y) {
         int column = x - x % 3;
         int row = y - y % 3;
-        int k = 0;
         List<SudokuField> box = new ArrayList<>(getBoardSize());
         for (int i = row; i < row + 3; i++) {
-            for (int j = column; j < column + 3; j++, k++) {
+            for (int j = column; j < column + 3; j++) {
                 box.add(new SudokuField(board.get(getBoardSize() * i + j).getFieldValue()));
             }
         }
@@ -113,16 +115,28 @@ public class SudokuBoard implements PropertyChangeListener {
         if (this == o) {
             return true;
         }
+
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        SudokuBoard board1 = (SudokuBoard) o;
-        return Objects.equals(board, board1.board);
+
+        SudokuBoard that = (SudokuBoard) o;
+
+        return new EqualsBuilder().append(board, that.board).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(board);
+        return new HashCodeBuilder(17, 37).append(board).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("board", board)
+                .append("sudokuSolver", sudokuSolver)
+                .append("isVerified", isVerified)
+                .toString();
     }
 
     @Override
