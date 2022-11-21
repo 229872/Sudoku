@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 import pl.component.exceptions.WrongValueException;
-import pl.component.model.SudokuBoard;
+import pl.component.model.main.SudokuBoard;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.elements.SudokuRow;
 

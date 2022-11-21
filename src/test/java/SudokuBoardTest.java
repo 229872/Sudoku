@@ -1,10 +1,8 @@
 import org.junit.jupiter.api.Test;
 import pl.component.exceptions.WrongValueException;
-import pl.component.model.SudokuBoard;
+import pl.component.model.main.SudokuBoard;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -147,7 +145,7 @@ public class SudokuBoardTest {
 
     @Test
     public void toStringTest() {
-        String expected = "pl.component.model.SudokuBoard";
+        String expected = "pl.component.model.main.SudokuBoard";
         assertTrue(board1.toString().startsWith(expected));
     }
 

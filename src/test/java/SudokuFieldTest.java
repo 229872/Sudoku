@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import pl.component.model.SudokuField;
+import pl.component.model.main.SudokuField;
 
 import static org.junit.jupiter.api.Assertions.*;
 

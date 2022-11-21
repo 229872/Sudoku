@@ -1,4 +1,4 @@
-package pl.component.model;
+package pl.component.model.main;
 
 import java.util.HashSet;
 import java.util.List;

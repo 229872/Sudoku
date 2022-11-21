@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import pl.component.exceptions.WrongValueException;
-import pl.component.model.SudokuBoard;
+import pl.component.model.main.SudokuBoard;
 
 
 

@@ -1,7 +1,8 @@
-package pl.component.model;
+package pl.component.model.main;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,7 +17,7 @@ import pl.component.model.elements.SudokuColumn;
 import pl.component.model.elements.SudokuRow;
 
 
-public class SudokuBoard implements PropertyChangeListener {
+public class SudokuBoard implements PropertyChangeListener, Serializable {
     private final List<SudokuField> board;
     private SudokuSolver sudokuSolver;
     private boolean isVerified = false;
