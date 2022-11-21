@@ -1,7 +1,6 @@
 package pl.component.dao;
 
 import pl.component.model.main.SudokuBoard;
-
 import java.io.*;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard> {
@@ -17,7 +16,8 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             ObjectInput input = new ObjectInputStream(inputStream)) {
             return (SudokuBoard) input.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            throw new RuntimeException("Couldn't read from file");
+            System.err.println(e.getMessage());
+            throw new RuntimeException();
         }
     }
 
@@ -27,7 +27,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             ObjectOutput output = new ObjectOutputStream(outputStream)) {
             output.writeObject(obj);
         } catch (IOException e) {
-            throw new RuntimeException("Couldn't write to file");
+            System.err.println(e.getMessage());
         }
     }
 

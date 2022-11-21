@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/component/dao/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/component/dao/FileSudokuBoardDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FileSudokuBoardDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/dao/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/dao/FileSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/component/model/algorithm/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/component/model/algorithm/SudokuSolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,20 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in mkw_czw_1545_04">
+  <component name="RunManager" selected="JUnit.FileSudokuBoardDaoTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.component.model.Main" />
+      <module name="mkw_czw_1545_04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.component.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in mkw_czw_1545_04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mkw_czw_1545_04" />
       <option name="PACKAGE_NAME" value="" />
@@ -70,41 +84,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardTest.listenerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mkw_czw_1545_04" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="METHOD_NAME" value="listenerTest" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSudokuBoardDaoTest.consistencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mkw_czw_1545_04" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="consistencyTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileSudokuBoardDaoTest.readTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mkw_czw_1545_04" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="METHOD_NAME" value="toStringTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuElementTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mkw_czw_1545_04" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuElementTest" />
-      <option name="METHOD_NAME" value="toStringTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuFieldTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mkw_czw_1545_04" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuFieldTest" />
-      <option name="METHOD_NAME" value="toStringTest" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="readTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,20 +137,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.SudokuBoardTest.toStringTest" />
-      <item itemvalue="JUnit.SudokuElementTest.toStringTest" />
-      <item itemvalue="JUnit.SudokuFieldTest.toStringTest" />
-      <item itemvalue="JUnit.SudokuBoardTest.listenerTest" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest.consistencyTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest.readTest" />
       <item itemvalue="JUnit.All in mkw_czw_1545_04" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest.consistencyTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest.readTest" />
         <item itemvalue="JUnit.All in mkw_czw_1545_04" />
-        <item itemvalue="JUnit.SudokuBoardTest.toStringTest" />
-        <item itemvalue="JUnit.SudokuElementTest.toStringTest" />
-        <item itemvalue="JUnit.SudokuFieldTest.toStringTest" />
-        <item itemvalue="JUnit.SudokuBoardTest.listenerTest" />
       </list>
     </recent_temporary>
   </component>
