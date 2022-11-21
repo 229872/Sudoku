@@ -1,7 +1,14 @@
 package pl.component.dao;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import pl.component.model.main.SudokuBoard;
-import java.io.*;
+
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard> {
     public final String fileName;
