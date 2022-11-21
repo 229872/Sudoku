@@ -8,6 +8,7 @@ import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.SudokuBoard;
 
 import java.io.File;
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -57,5 +58,28 @@ public class FileSudokuBoardDaoTest {
         assertDoesNotThrow(() -> board.getRow(0));
         assertDoesNotThrow(() -> board.getColumn(0));
         assertDoesNotThrow(() -> board.setVerified(true));
+    }
+
+    @Test
+    public void readNoFileTest() {
+        try (Dao<SudokuBoard> wrongDao = SudokuBoardDaoFactory.getFileDao("")) {
+
+            assertThrows(RuntimeException.class,
+                    () -> { SudokuBoard b1 = wrongDao.read();});
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Test
+    public void writeNoFileTest() {
+        try (Dao<SudokuBoard> wrongDao = SudokuBoardDaoFactory.getFileDao("")) {
+
+            assertThrows(RuntimeException.class,
+                    () -> { wrongDao.write(board);});
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
