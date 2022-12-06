@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/SudokuSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

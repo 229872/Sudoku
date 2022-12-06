@@ -42,5 +42,4 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
         return true;
     }
 
-
 }

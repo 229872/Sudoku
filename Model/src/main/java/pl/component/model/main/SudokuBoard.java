@@ -11,14 +11,15 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import pl.component.exceptions.WrongValueException;
+import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.algorithm.SudokuSolver;
 import pl.component.model.elements.SudokuBox;
 import pl.component.model.elements.SudokuColumn;
 import pl.component.model.elements.SudokuRow;
 
 
-public class SudokuBoard implements PropertyChangeListener, Serializable {
-    private final List<SudokuField> board;
+public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
+    private List<SudokuField> board;
     private SudokuSolver sudokuSolver;
     private boolean isVerified = false;
 
@@ -144,6 +145,23 @@ public class SudokuBoard implements PropertyChangeListener, Serializable {
     public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
         if (!checkBoard() && isVerified) {
             throw new RuntimeException("Wrong value: " + propertyChangeEvent.getNewValue());
+        }
+    }
+
+    @Override
+    public SudokuBoard clone() {
+        try {
+            SudokuBoard cloneBoard = (SudokuBoard) super.clone();
+            cloneBoard.board = Arrays.asList(new SudokuField[81]);
+
+            for (int i = 0; i < 81; i++) {
+                cloneBoard.board.set(i, board.get(i));
+                cloneBoard.board.get(i).addPropertyChangeListener(cloneBoard);
+            }
+
+            return cloneBoard;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
         }
     }
 }

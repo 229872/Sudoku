@@ -23,7 +23,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             ObjectInput input = new ObjectInputStream(inputStream)) {
             return (SudokuBoard) input.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            throw new RuntimeException(e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 
@@ -33,7 +33,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             ObjectOutput output = new ObjectOutputStream(outputStream)) {
             output.writeObject(obj);
         } catch (IOException e) {
-            throw new RuntimeException(e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 
