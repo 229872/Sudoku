@@ -6,18 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/SudokuSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuElementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,49 +69,51 @@
       <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in SudokuGame">
-    <configuration name="All in SudokuGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SudokuElementTest">
+    <configuration name="SudokuBoardTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuGame" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
+      <option name="METHOD_NAME" value="cloneTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mkw_czw_1545_04" />
+    <configuration name="SudokuElementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SudokuGame" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="SudokuElementTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSudokuBoardDaoTest.readNoFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SudokuElementTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuGame" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
-      <option name="METHOD_NAME" value="readNoFileTest" />
+      <option name="MAIN_CLASS_NAME" value="SudokuElementTest" />
+      <option name="METHOD_NAME" value="cloneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSudokuBoardDaoTest.testNoFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SudokuFieldTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuGame" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
-      <option name="METHOD_NAME" value="testNoFile" />
+      <option name="MAIN_CLASS_NAME" value="SudokuFieldTest" />
+      <option name="METHOD_NAME" value="cloneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSudokuBoardDaoTest.writeNoFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SudokuFieldTest.compareToShouldThrowNullPointerExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuGame" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
-      <option name="METHOD_NAME" value="writeNoFileTest" />
+      <option name="MAIN_CLASS_NAME" value="SudokuFieldTest" />
+      <option name="METHOD_NAME" value="compareToShouldThrowNullPointerExceptionTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,20 +143,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.FileSudokuBoardDaoTest.readNoFileTest" />
-      <item itemvalue="JUnit.FileSudokuBoardDaoTest.testNoFile" />
-      <item itemvalue="JUnit.FileSudokuBoardDaoTest.writeNoFileTest" />
-      <item itemvalue="JUnit.All in SudokuGame" />
-      <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+      <item itemvalue="JUnit.SudokuBoardTest.cloneTest" />
+      <item itemvalue="JUnit.SudokuElementTest" />
+      <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
+      <item itemvalue="JUnit.SudokuFieldTest.cloneTest" />
+      <item itemvalue="JUnit.SudokuFieldTest.compareToShouldThrowNullPointerExceptionTest" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in SudokuGame" />
-        <item itemvalue="JUnit.FileSudokuBoardDaoTest.readNoFileTest" />
-        <item itemvalue="JUnit.FileSudokuBoardDaoTest.writeNoFileTest" />
-        <item itemvalue="JUnit.FileSudokuBoardDaoTest.testNoFile" />
-        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.SudokuElementTest" />
+        <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
+        <item itemvalue="JUnit.SudokuFieldTest.cloneTest" />
+        <item itemvalue="JUnit.SudokuBoardTest.cloneTest" />
+        <item itemvalue="JUnit.SudokuFieldTest.compareToShouldThrowNullPointerExceptionTest" />
       </list>
     </recent_temporary>
   </component>

@@ -30,4 +30,26 @@ public class SudokuFieldTest {
         String expected = "[value=0]";
         assertTrue(field1.toString().contains(expected));
     }
+
+    @Test
+    public void compareToTest() {
+        assertEquals(0, field1.compareTo(field2));
+        field1.setFieldValue(1);
+        field2.setFieldValue(5);
+        assertEquals(-1, field1.compareTo(field2));
+        assertEquals(1, field2.compareTo(field1));
+
+    }
+
+    @Test
+    public void compareToShouldThrowNullPointerExceptionTest() {
+        assertThrows(NullPointerException.class,
+                () -> field1.compareTo(null));
+    }
+
+    @Test
+    public void cloneTest() {
+        SudokuField clone = field1.clone();
+        assertEquals(field1, clone);
+    }
 }

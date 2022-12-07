@@ -1,8 +1,16 @@
 import org.junit.jupiter.api.Test;
 import pl.component.exceptions.WrongValueException;
+import pl.component.model.elements.SudokuBox;
 import pl.component.model.main.SudokuBoard;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.elements.SudokuRow;
+import pl.component.model.main.SudokuElement;
+import pl.component.model.main.SudokuField;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -48,5 +56,19 @@ public class SudokuElementTest {
         assertTrue(board.getBox(0, 0).toString().startsWith(expected + "SudokuBox"));
         assertTrue(board.getRow(0).toString().startsWith(expected + "SudokuRow"));
         assertTrue(board.getColumn(0).toString().startsWith(expected + "SudokuColumn"));
+    }
+
+    @Test
+    public void cloneTest() {
+        List<SudokuField> fields = Arrays.asList(new SudokuField[9]);
+        for (int i = 0; i < fields.size(); i++) {
+            fields.set(i, new SudokuField(0));
+        }
+        SudokuElement box = new SudokuBox(fields);
+        SudokuElement clone = box.clone();
+        assertEquals(box, clone);
+
+        fields.set(0, new SudokuField(5));
+        assertNotEquals(box, clone);
     }
 }

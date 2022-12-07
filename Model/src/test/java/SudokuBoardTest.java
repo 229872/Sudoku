@@ -165,6 +165,18 @@ public class SudokuBoardTest {
         }
     }
 
+    @Test
+    public void cloneTest() {
+        SudokuBoard clone = board1.clone();
+        assertEquals(board1, clone);
+        try {
+            clone.set(0,0,9);
+            assertNotEquals(board1, clone);
+        } catch (WrongValueException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     private static class SudokuBoardTestHelper {
 

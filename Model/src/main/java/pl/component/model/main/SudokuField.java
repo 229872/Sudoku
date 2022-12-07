@@ -3,6 +3,8 @@ package pl.component.model.main;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
+import java.util.Objects;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -60,6 +62,7 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
 
     @Override
     public int compareTo(SudokuField sudokuField) {
+        Objects.requireNonNull(sudokuField);
         return Integer.compare(value, sudokuField.value);
     }
 
