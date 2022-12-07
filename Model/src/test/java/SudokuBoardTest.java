@@ -185,17 +185,17 @@ public class SudokuBoardTest {
         assertEquals(0, SudokuBoardTestHelper.countEmptyFields(board1));
         board1.setDifficultyLevel(Difficulty.EASY);
         board1.deleteFields();
-        assertEquals(20, SudokuBoardTestHelper.countEmptyFields(board1));
+        assertEquals(30, SudokuBoardTestHelper.countEmptyFields(board1));
 
         board1.solveGame();
         board1.setDifficultyLevel(Difficulty.MEDIUM);
         board1.deleteFields();
-        assertEquals(35, SudokuBoardTestHelper.countEmptyFields(board1));
+        assertEquals(50, SudokuBoardTestHelper.countEmptyFields(board1));
 
         board1.solveGame();
         board1.setDifficultyLevel(Difficulty.HARD);
         board1.deleteFields();
-        assertEquals(50, SudokuBoardTestHelper.countEmptyFields(board1));
+        assertEquals(60, SudokuBoardTestHelper.countEmptyFields(board1));
     }
 
 

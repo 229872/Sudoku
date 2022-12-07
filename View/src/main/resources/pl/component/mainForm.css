@@ -1,0 +1,12 @@
+.choice-box, .context-menu {
+    -fx-pref-width: 200;
+    -fx-border-color: black;
+}
+
+.button {
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 100;
+    -fx-pref-height: 50;
+}

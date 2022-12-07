@@ -1,7 +1,7 @@
 package pl.component.model.main;
 
 public enum Difficulty {
-    EASY(20), MEDIUM(35), HARD(50);
+    EASY(30), MEDIUM(50), HARD(60);
 
     private final int numberOfDeletedFields;
 

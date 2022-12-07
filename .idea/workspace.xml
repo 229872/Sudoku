@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/MainFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/mainForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/mainForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/Difficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/Difficulty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +28,9 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -68,11 +75,27 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/View/src/main/resources/pl/component" />
+      <recent name="$PROJECT_DIR$/View/src/main/resources" />
+      <recent name="$PROJECT_DIR$/View/src/main/resources/pl.component" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SudokuBoardTest.deleteFieldsTest">
+  <component name="RunManager" selected="Application.Window">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.component.App" />
+      <module name="View" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.component.Main" />
       <module name="Model" />
@@ -115,16 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuFieldTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Model" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuFieldTest" />
-      <option name="METHOD_NAME" value="cloneTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Sudoku" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -149,20 +162,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Window" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
       <item itemvalue="JUnit.SudokuElementTest" />
       <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
-      <item itemvalue="JUnit.SudokuFieldTest.cloneTest" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Window" />
         <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SudokuElementTest" />
         <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
-        <item itemvalue="JUnit.SudokuFieldTest.cloneTest" />
       </list>
     </recent_temporary>
   </component>

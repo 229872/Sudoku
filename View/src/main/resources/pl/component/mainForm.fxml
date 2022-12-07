@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="620.0" prefWidth="860.0" style="-fx-background-color: lime;" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.component.MainFormController">
+    <children>
+        <VBox fx:id="root" alignment="CENTER" layoutX="222.0" layoutY="235.0" prefHeight="328.0" prefWidth="479.0" spacing="20.0" stylesheets="@mainForm.css">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+         <Label text="Choose difficulty">
+            <font>
+               <Font size="40.0" />
+            </font>
+         </Label>
+            <ChoiceBox fx:id="chooseDifficultyBox" prefWidth="150.0" style="-fx-pref-width: 150; -fx-background-color: #FFFFFF;" stylesheets="@mainForm.css">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Easy" />
+                        <String fx:value="Medium" />
+                        <String fx:value="Hard" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <Button fx:id="button" onAction="#switchToPlayGameForm" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" text="Start" />
+        </VBox>
+      <TilePane layoutX="182.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="85.0" prefWidth="559.0" text="Play sudoku">
+               <font>
+                  <Font name="System Bold" size="70.0" />
+               </font>
+            </Label>
+         </children>
+      </TilePane>
+    </children>
+</Pane>
