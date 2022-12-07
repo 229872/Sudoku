@@ -3,10 +3,8 @@ package pl.component.model.main;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -21,6 +19,7 @@ import pl.component.model.elements.SudokuRow;
 public class SudokuBoard implements PropertyChangeListener, Serializable, Cloneable {
     private List<SudokuField> board;
     private SudokuSolver sudokuSolver;
+    private Difficulty difficultyLevel;
     private boolean isVerified = false;
 
     public SudokuBoard(SudokuSolver sudokuSolver) {
@@ -53,6 +52,35 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
             board.get(getBoardSize() * y + x).setFieldValue(value);
         } else {
             throw new WrongValueException("Wrong value, value too small or too high");
+        }
+    }
+
+    public Difficulty getDifficultyLevel() {
+        return difficultyLevel;
+    }
+
+    public void setDifficultyLevel(Difficulty difficultyLevel) {
+        this.difficultyLevel = difficultyLevel;
+    }
+
+    public void deleteFields() {
+        Random random = new Random();
+
+        int i = 0;
+        int rowIndex;
+        int colIndex;
+        while (i < difficultyLevel.getNumberOfDeletedFields()) {
+            rowIndex = random.nextInt(9);
+            colIndex = random.nextInt(9);
+
+            try {
+                if (get(colIndex, rowIndex) != 0) {
+                    board.get(rowIndex * 9 + colIndex).setFieldValue(0);
+                    i++;
+                }
+            } catch (WrongValueException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

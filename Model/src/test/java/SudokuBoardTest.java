@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import pl.component.exceptions.WrongValueException;
+import pl.component.model.main.Difficulty;
 import pl.component.model.main.SudokuBoard;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 
@@ -177,6 +178,26 @@ public class SudokuBoardTest {
         }
     }
 
+    @Test
+    public void deleteFieldsTest() {
+        board1.solveGame();
+
+        assertEquals(0, SudokuBoardTestHelper.countEmptyFields(board1));
+        board1.setDifficultyLevel(Difficulty.EASY);
+        board1.deleteFields();
+        assertEquals(20, SudokuBoardTestHelper.countEmptyFields(board1));
+
+        board1.solveGame();
+        board1.setDifficultyLevel(Difficulty.MEDIUM);
+        board1.deleteFields();
+        assertEquals(35, SudokuBoardTestHelper.countEmptyFields(board1));
+
+        board1.solveGame();
+        board1.setDifficultyLevel(Difficulty.HARD);
+        board1.deleteFields();
+        assertEquals(50, SudokuBoardTestHelper.countEmptyFields(board1));
+    }
+
 
     private static class SudokuBoardTestHelper {
 
@@ -251,6 +272,23 @@ public class SudokuBoardTest {
                 }
             }
             return true;
+        }
+
+        private static int countEmptyFields(SudokuBoard sudokuBoard) {
+            int counter = 0;
+
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 9; j++) {
+                    try {
+                        if (sudokuBoard.get(j, i) == 0) {
+                            counter++;
+                        }
+                    } catch (WrongValueException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+            return counter;
         }
     }
 }

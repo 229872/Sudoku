@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/Difficulty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuElementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -69,12 +69,25 @@
       <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SudokuElementTest">
-    <configuration name="SudokuBoardTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SudokuBoardTest.deleteFieldsTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.component.Main" />
+      <module name="SudokuGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuBoardTest.deleteFieldsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuGame" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="METHOD_NAME" value="cloneTest" />
+      <option name="METHOD_NAME" value="deleteFieldsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,16 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuFieldTest.compareToShouldThrowNullPointerExceptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SudokuGame" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuFieldTest" />
-      <option name="METHOD_NAME" value="compareToShouldThrowNullPointerExceptionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Sudoku" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -143,20 +146,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.SudokuBoardTest.cloneTest" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
       <item itemvalue="JUnit.SudokuElementTest" />
       <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
       <item itemvalue="JUnit.SudokuFieldTest.cloneTest" />
-      <item itemvalue="JUnit.SudokuFieldTest.compareToShouldThrowNullPointerExceptionTest" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SudokuElementTest" />
         <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
         <item itemvalue="JUnit.SudokuFieldTest.cloneTest" />
-        <item itemvalue="JUnit.SudokuBoardTest.cloneTest" />
-        <item itemvalue="JUnit.SudokuFieldTest.compareToShouldThrowNullPointerExceptionTest" />
       </list>
     </recent_temporary>
   </component>
