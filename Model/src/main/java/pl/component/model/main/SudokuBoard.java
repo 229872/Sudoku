@@ -155,7 +155,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
             cloneBoard.board = Arrays.asList(new SudokuField[81]);
 
             for (int i = 0; i < 81; i++) {
-                cloneBoard.board.set(i, board.get(i));
+                cloneBoard.board.set(i, new SudokuField(board.get(i).getFieldValue()));
                 cloneBoard.board.get(i).addPropertyChangeListener(cloneBoard);
             }
 

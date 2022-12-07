@@ -10,13 +10,4 @@ public class SudokuBox extends SudokuElement {
     public SudokuBox(List<SudokuField> fields) {
         super(fields);
     }
-
-    @Override
-    public SudokuBox clone()  {
-        try {
-            return (SudokuBox) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new AssertionError();
-        }
-    }
 }

@@ -10,7 +10,11 @@
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/BacktrackingSudokuSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/algorithm/SudokuSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/elements/SudokuRow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />

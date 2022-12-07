@@ -1,6 +1,7 @@
 package pl.component.model.main;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -10,7 +11,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
 public abstract class SudokuElement implements Serializable, Cloneable {
-    private final List<SudokuField> fields;
+    private List<SudokuField> fields;
 
     public SudokuElement(List<SudokuField> fields) {
         this.fields = fields;
@@ -55,5 +56,22 @@ public abstract class SudokuElement implements Serializable, Cloneable {
         return new ToStringBuilder(this)
                 .append("fields", fields)
                 .toString();
+    }
+
+    @Override
+    public SudokuElement clone() {
+        try {
+            SudokuElement clone = (SudokuElement) super.clone();
+            List<SudokuField> sudokuFields = new ArrayList<>();
+
+            for (SudokuField field : fields) {
+                sudokuFields.add(new SudokuField(field.getFieldValue()));
+            }
+
+            clone.fields = sudokuFields;
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }
