@@ -9,7 +9,6 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import pl.component.exceptions.WrongValueException;
-import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.algorithm.SudokuSolver;
 import pl.component.model.elements.SudokuBox;
 import pl.component.model.elements.SudokuColumn;
@@ -34,7 +33,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     public int get(int x, int y) throws WrongValueException {
-        if (y >= 0 && y < getBoardSize() && x >= 0 && x < getBoardSize()) {
+        if(y >= 0 && y < getBoardSize() && x >= 0 && x < getBoardSize()) {
             return board.get(getBoardSize() * y + x).getFieldValue();
         } else {
             throw new WrongValueException("Wrong row or column");

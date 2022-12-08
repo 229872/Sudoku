@@ -16,7 +16,7 @@ public class MainFormController {
 
 
     @FXML
-    private void switchToPlayGameForm() throws IOException {
+    public void switchToPlayGameForm() throws IOException {
         FXMLLoader loader = App.getFxmlLoader("playGameForm.fxml");
         Parent parent = loader.load();
         PlayGameFormController playGameFormController = loader.getController();

@@ -30,7 +30,7 @@ public class PlayGameFormController {
         fillGrid();
     }
     @FXML
-    private void backToMainForm() throws IOException {
+    public void backToMainForm() throws IOException {
         App.backToMainForm();
     }
 
@@ -53,7 +53,7 @@ public class PlayGameFormController {
                     });
                     textField.setTextFormatter(new TextFormatter<>(this::filter));
 
-                    textField.textProperty().addListener(((observableValue, s, t1) -> {
+                    textField.textProperty().addListener((observableValue, s, t1) -> {
                         try {
                             sudokuBoard.set(GridPane.getRowIndex(textField),
                                     GridPane.getColumnIndex(textField),
@@ -68,7 +68,7 @@ public class PlayGameFormController {
                                 throw new RuntimeException(ex);
                             }
                         }
-                    }));
+                    });
                     sudokuBoardGrid.add(textField, j, i);
 
                 } catch (WrongValueException e) {

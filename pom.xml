@@ -90,6 +90,9 @@
                         </reports>
                     </reportSet>
                 </reportSets>
+                <configuration>
+                    <destFile>${project.basedir}/../target/jacoco.exec</destFile>
+                </configuration>
             </plugin>
         </plugins>
     </reporting>
@@ -104,7 +107,7 @@
                 <configuration>
                     <configLocation>checkstyle2022.xml</configLocation>
                     <consoleOutput>true</consoleOutput>
-                    <failsOnError>false</failsOnError>
+                    <failsOnError>true</failsOnError>
                     <linkXRef>false</linkXRef>
                     <excludes>../module-info.java</excludes>
                 </configuration>
@@ -128,6 +131,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
