@@ -1,4 +1,4 @@
-module ModelProject {
+open module ModelProject {
     requires java.desktop;
     requires org.apache.commons.lang3;
 
