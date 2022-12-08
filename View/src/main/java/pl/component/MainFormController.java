@@ -1,5 +1,6 @@
 package pl.component;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,8 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import pl.component.model.main.Difficulty;
-
-import java.io.IOException;
 
 public class MainFormController {
     public Button button;
@@ -24,6 +23,7 @@ public class MainFormController {
             case "Easy" -> playGameFormController.setDifficultyLevel(Difficulty.EASY);
             case "Medium" -> playGameFormController.setDifficultyLevel(Difficulty.MEDIUM);
             case "Hard" -> playGameFormController.setDifficultyLevel(Difficulty.HARD);
+            default -> throw new RuntimeException("No option");
         }
         playGameFormController.startGame();
         App.setRoot(parent);

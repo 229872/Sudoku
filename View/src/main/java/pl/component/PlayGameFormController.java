@@ -1,5 +1,6 @@
 package pl.component;
 
+import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -12,7 +13,6 @@ import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.Difficulty;
 import pl.component.model.main.SudokuBoard;
 
-import java.io.IOException;
 
 public class PlayGameFormController {
 
@@ -29,6 +29,7 @@ public class PlayGameFormController {
         sudokuBoard.deleteFields();
         fillGrid();
     }
+
     @FXML
     public void backToMainForm() throws IOException {
         App.backToMainForm();
@@ -88,11 +89,14 @@ public class PlayGameFormController {
     private void setHiddenField(TextField field) {
         field.setMaxSize(100,65);
         field.setFont(Font.font("Comic Sans MS", FontWeight.BOLD, 18));
-        field.setStyle("-fx-background-color: #F0EBD7;-fx-alignment: center; -fx-border-style: solid; -fx-opacity: 100%");
+        field.setStyle("-fx-background-color: #F0EBD7;-fx-alignment: center;"
+                + "-fx-border-style: solid; -fx-opacity: 100%");
     }
+
     private void setVisibleField(TextField field) {
         field.setMaxSize(100,65);
         field.setFont(Font.font("Comic Sans MS", FontWeight.BOLD, 18));
-        field.setStyle("-fx-background-color: #F0EBD7;-fx-alignment: center; -fx-border-style: solid");
+        field.setStyle("-fx-background-color: #F0EBD7;-fx-alignment: center;"
+                + "-fx-border-style: solid");
     }
 }

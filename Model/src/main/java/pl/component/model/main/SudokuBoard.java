@@ -3,8 +3,11 @@ package pl.component.model.main;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.Serializable;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.Random;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -33,7 +36,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     public int get(int x, int y) throws WrongValueException {
-        if(y >= 0 && y < getBoardSize() && x >= 0 && x < getBoardSize()) {
+        if (y >= 0 && y < getBoardSize() && x >= 0 && x < getBoardSize()) {
             return board.get(getBoardSize() * y + x).getFieldValue();
         } else {
             throw new WrongValueException("Wrong row or column");
