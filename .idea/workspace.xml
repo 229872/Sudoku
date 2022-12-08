@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/MainFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/mainForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/mainForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/Difficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/Difficulty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +73,7 @@
       <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Window">
+  <component name="RunManager" selected="JUnit.All in Model">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.component.App" />
       <module name="View" />
@@ -109,6 +100,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in Model" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Model" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SudokuBoardTest.deleteFieldsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Model" />
       <option name="PACKAGE_NAME" value="" />
@@ -124,16 +123,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SudokuElementTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuElementTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Model" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuElementTest" />
-      <option name="METHOD_NAME" value="cloneTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,18 +153,18 @@
     <list>
       <item itemvalue="Application.Window" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.All in Model" />
       <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
       <item itemvalue="JUnit.SudokuElementTest" />
-      <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Model" />
         <item itemvalue="Application.Window" />
         <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SudokuElementTest" />
-        <item itemvalue="JUnit.SudokuElementTest.cloneTest" />
       </list>
     </recent_temporary>
   </component>

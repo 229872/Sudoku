@@ -44,6 +44,7 @@
     </dependencyManagement>
 
     <build>
+        <testSourceDirectory>${project.basedir}/Model/src/test/java</testSourceDirectory>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -87,10 +88,11 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
-                    <configLocation>../checkstyle2022.xml</configLocation>
+                    <configLocation>checkstyle2022.xml</configLocation>
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
                     <linkXRef>false</linkXRef>
+                    <excludes>**/module-info.java</excludes>
                 </configuration>
                 <reportSets>
                     <reportSet>
@@ -132,6 +134,8 @@
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
