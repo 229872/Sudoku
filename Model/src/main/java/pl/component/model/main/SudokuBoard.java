@@ -66,24 +66,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     public void deleteFields() {
-        Random random = new Random();
-
-        int i = 0;
-        int rowIndex;
-        int colIndex;
-        while (i < difficultyLevel.getNumberOfDeletedFields()) {
-            rowIndex = random.nextInt(9);
-            colIndex = random.nextInt(9);
-
-            try {
-                if (get(colIndex, rowIndex) != 0) {
-                    board.get(rowIndex * 9 + colIndex).setFieldValue(0);
-                    i++;
-                }
-            } catch (WrongValueException e) {
-                throw new RuntimeException(e);
-            }
-        }
+        difficultyLevel.deleteFields(this);
     }
 
     public void setVerified(boolean verified) {
