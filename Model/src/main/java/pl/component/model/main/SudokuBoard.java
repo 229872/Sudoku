@@ -36,27 +36,31 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
             board.set(i, new SudokuField(0));
             board.get(i).addPropertyChangeListener(this);
         }
-        logger.debug("Works");
+        logger.debug("Sudoku board created " + this);
     }
 
     public int get(int x, int y) throws WrongValueException {
         if (y >= 0 && y < getBoardSize() && x >= 0 && x < getBoardSize()) {
             return board.get(getBoardSize() * y + x).getFieldValue();
         } else {
+            logger.debug("Wrong row or column:  column={}, row={}", x, y);
             throw new WrongValueException("Wrong row or column");
         }
     }
 
     public void set(int x, int y, int value) throws WrongValueException {
         if (y < 0 || y >= getBoardSize()) {
+            logger.debug("Wrong row, row index too small or too high:  row={}", y);
             throw new WrongValueException("Wrong row, row index too small or too high");
         }
         if (x < 0 || x >= getBoardSize()) {
+            logger.debug("Wrong column, column index too small or too high:  column={}", x);
             throw new WrongValueException("Wrong column, column index too small or too high");
         }
         if (value >= 0 && value <= getBoardSize()) {
             board.get(getBoardSize() * y + x).setFieldValue(value);
         } else {
+            logger.debug("Wrong value, value too small or too high:  value={}", value);
             throw new WrongValueException("Wrong value, value too small or too high");
         }
     }
@@ -66,6 +70,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     public void setDifficultyLevel(Difficulty difficultyLevel) {
+        logger.debug("Set difficulty level from " + this.difficultyLevel + " to " + difficultyLevel);
         this.difficultyLevel = difficultyLevel;
     }
 
@@ -75,6 +80,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
 
     public void setVerified(boolean verified) {
         isVerified = verified;
+        logger.debug("Set verified: {}", isVerified);
     }
 
     private boolean checkBoard() {
@@ -161,6 +167,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     @Override
     public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
         if (!checkBoard() && isVerified) {
+            logger.debug("Wrong value: {}", propertyChangeEvent.getNewValue());
             throw new RuntimeException("Wrong value: " + propertyChangeEvent.getNewValue());
         }
     }
