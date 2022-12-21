@@ -8,10 +8,8 @@ import pl.component.exceptions.WriteFileException;
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.SudokuBoard;
-
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 

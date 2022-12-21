@@ -3,10 +3,8 @@ package pl.component.model.main;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -26,6 +24,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     private boolean isVerified = false;
 
     private final static Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
+    private final static ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
 
     public SudokuBoard(SudokuSolver sudokuSolver) {
         Objects.requireNonNull(sudokuSolver);
@@ -44,24 +43,24 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
             return board.get(getBoardSize() * y + x).getFieldValue();
         } else {
             logger.debug("Wrong row or column:  column={}, row={}", x, y);
-            throw new WrongValueException("Wrong row or column");
+            throw new WrongValueException(bundle.getString("SudokuBoard.exceptions.get"));
         }
     }
 
     public void set(int x, int y, int value) throws WrongValueException {
         if (y < 0 || y >= getBoardSize()) {
             logger.debug("Wrong row, row index too small or too high:  row={}", y);
-            throw new WrongValueException("Wrong row, row index too small or too high");
+            throw new WrongValueException(bundle.getString("SudokuBoard.exceptions.set.row"));
         }
         if (x < 0 || x >= getBoardSize()) {
             logger.debug("Wrong column, column index too small or too high:  column={}", x);
-            throw new WrongValueException("Wrong column, column index too small or too high");
+            throw new WrongValueException(bundle.getString("SudokuBoard.exceptions.set.column"));
         }
         if (value >= 0 && value <= getBoardSize()) {
             board.get(getBoardSize() * y + x).setFieldValue(value);
         } else {
             logger.debug("Wrong value, value too small or too high:  value={}", value);
-            throw new WrongValueException("Wrong value, value too small or too high");
+            throw new WrongValueException(bundle.getString("SudokuBoard.exceptions.set.value"));
         }
     }
 
