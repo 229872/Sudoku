@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.Random;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.algorithm.SudokuSolver;
 import pl.component.model.elements.SudokuBox;
@@ -24,6 +25,8 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     private Difficulty difficultyLevel;
     private boolean isVerified = false;
 
+    private final static Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
+
     public SudokuBoard(SudokuSolver sudokuSolver) {
         Objects.requireNonNull(sudokuSolver);
         this.sudokuSolver = sudokuSolver;
@@ -33,6 +36,7 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
             board.set(i, new SudokuField(0));
             board.get(i).addPropertyChangeListener(this);
         }
+        logger.debug("Works");
     }
 
     public int get(int x, int y) throws WrongValueException {

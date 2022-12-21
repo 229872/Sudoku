@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Model/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/MainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/MainFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkstyle2022.xml" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle2022.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
