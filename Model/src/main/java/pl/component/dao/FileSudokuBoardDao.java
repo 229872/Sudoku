@@ -7,6 +7,9 @@ import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+
+import pl.component.exceptions.ReadFileException;
+import pl.component.exceptions.WriteFileException;
 import pl.component.model.main.SudokuBoard;
 
 
@@ -23,7 +26,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             ObjectInput input = new ObjectInputStream(inputStream)) {
             return (SudokuBoard) input.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            throw new ReadFileException("Couldn't read file" ,e);
         }
     }
 
@@ -33,7 +36,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             ObjectOutput output = new ObjectOutputStream(outputStream)) {
             output.writeObject(obj);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new WriteFileException("Couldn't write file" ,e);
         }
     }
 

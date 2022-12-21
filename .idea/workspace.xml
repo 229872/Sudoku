@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/ReadFileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/WriteFileException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/model/main/SudokuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/FileSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +23,8 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="module-info" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,7 +76,7 @@
       <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.FileSudokuBoardDaoTest.writeNoFileTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.component.App" />
       <module name="View" />
@@ -87,42 +90,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.component.Main" />
-      <module name="Model" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.component.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Model" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Model" />
+    <configuration name="FileSudokuBoardDaoTest.maiin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuBoardTest.deleteFieldsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Model" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="METHOD_NAME" value="deleteFieldsTest" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="maiin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuElementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Model" />
+    <configuration name="FileSudokuBoardDaoTest.readNoFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuElementTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="readNoFileTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSudokuBoardDaoTest.writeNoFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="writeNoFileTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,19 +154,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.All in Model" />
-      <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
-      <item itemvalue="JUnit.SudokuElementTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest.maiin" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest.readNoFileTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest.writeNoFileTest" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest.writeNoFileTest" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest.readNoFileTest" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest.maiin" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.All in Model" />
-        <item itemvalue="JUnit.SudokuBoardTest.deleteFieldsTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.SudokuElementTest" />
       </list>
     </recent_temporary>
   </component>

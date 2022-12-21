@@ -3,11 +3,14 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pl.component.dao.Dao;
 import pl.component.dao.SudokuBoardDaoFactory;
+import pl.component.exceptions.ReadFileException;
+import pl.component.exceptions.WriteFileException;
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.SudokuBoard;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,8 +67,9 @@ public class FileSudokuBoardDaoTest {
     public void readNoFileTest() {
         try (Dao<SudokuBoard> wrongDao = SudokuBoardDaoFactory.getFileDao("")) {
 
-            assertThrows(RuntimeException.class,
+            ReadFileException e = assertThrows(ReadFileException.class,
                     () -> { SudokuBoard b1 = wrongDao.read();});
+            assertEquals("Couldn't read file", e.getMessage());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -76,8 +80,9 @@ public class FileSudokuBoardDaoTest {
     public void writeNoFileTest() {
         try (Dao<SudokuBoard> wrongDao = SudokuBoardDaoFactory.getFileDao("")) {
 
-            assertThrows(RuntimeException.class,
+            WriteFileException e = assertThrows(WriteFileException.class,
                     () -> { wrongDao.write(board);});
+            assertEquals("Couldn't write file", e.getMessage());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
