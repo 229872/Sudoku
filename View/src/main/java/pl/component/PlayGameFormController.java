@@ -64,7 +64,7 @@ public class PlayGameFormController {
                                 sudokuBoard.set(GridPane.getRowIndex(textField),
                                         GridPane.getColumnIndex(textField),
                                         0
-                                        );
+                                );
                             } catch (WrongValueException ex) {
                                 throw new RuntimeException(ex);
                             }

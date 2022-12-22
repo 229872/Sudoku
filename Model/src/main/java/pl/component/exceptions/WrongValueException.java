@@ -1,6 +1,6 @@
 package pl.component.exceptions;
 
-public class WrongValueException extends Exception {
+public class WrongValueException extends RuntimeException {
     public WrongValueException() {
     }
 

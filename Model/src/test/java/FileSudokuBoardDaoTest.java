@@ -68,6 +68,11 @@ public class FileSudokuBoardDaoTest {
             ReadFileException e = assertThrows(ReadFileException.class,
                     () -> { SudokuBoard b1 = wrongDao.read();});
             assertEquals("Couldn't read file", e.getMessage());
+
+
+            ReadFileException e2 = assertThrows(ReadFileException.class,
+                    () -> { SudokuBoard b1 = wrongDao.read();});
+            assertEquals("Couldn't read file", e2.getMessage());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

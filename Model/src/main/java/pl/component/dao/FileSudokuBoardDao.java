@@ -8,7 +8,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.util.ResourceBundle;
-
 import pl.component.exceptions.ReadFileException;
 import pl.component.exceptions.WriteFileException;
 import pl.component.model.main.SudokuBoard;
@@ -16,7 +15,7 @@ import pl.component.model.main.SudokuBoard;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard> {
 
-    private final static ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
     private final String fileName;
 
     public FileSudokuBoardDao(String fileName) {
@@ -30,7 +29,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             return (SudokuBoard) input.readObject();
         } catch (IOException | ClassNotFoundException e) {
             throw new ReadFileException(
-                    bundle.getString("FileSudokuBoardDao.exception.read.message") ,e);
+                    bundle.getString("FileSudokuBoardDao.exception.read.message"), e);
         }
     }
 
@@ -41,7 +40,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             output.writeObject(obj);
         } catch (IOException e) {
             throw new WriteFileException(
-                    bundle.getString("FileSudokuBoardDao.exception.write.message") ,e);
+                    bundle.getString("FileSudokuBoardDao.exception.write.message"), e);
         }
     }
 

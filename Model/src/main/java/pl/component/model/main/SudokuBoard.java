@@ -3,8 +3,11 @@ package pl.component.model.main;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.Serializable;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.ResourceBundle;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -23,8 +26,8 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     private Difficulty difficultyLevel;
     private boolean isVerified = false;
 
-    private final static Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
-    private final static ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
+    private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
 
     public SudokuBoard(SudokuSolver sudokuSolver) {
         Objects.requireNonNull(sudokuSolver);
@@ -69,7 +72,8 @@ public class SudokuBoard implements PropertyChangeListener, Serializable, Clonea
     }
 
     public void setDifficultyLevel(Difficulty difficultyLevel) {
-        logger.debug("Set difficulty level from " + this.difficultyLevel + " to " + difficultyLevel);
+        logger.debug("Set difficulty level from "
+                + this.difficultyLevel + " to " + difficultyLevel);
         this.difficultyLevel = difficultyLevel;
     }
 
