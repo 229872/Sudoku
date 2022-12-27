@@ -50,5 +50,10 @@
             </Label>
          </children>
       </TilePane>
+      <Label fx:id="authorLabel" layoutX="701.0" layoutY="548.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

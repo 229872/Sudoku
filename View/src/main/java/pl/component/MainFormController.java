@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import pl.component.model.main.Difficulty;
 
 public class MainFormController {
@@ -23,7 +24,11 @@ public class MainFormController {
     @FXML
     private ComboBox<String> chooseLanguageBox;
 
+    @FXML
+    private Label authorLabel;
+
     private ResourceBundle bundle;
+    private ResourceBundle authorBundle;
 
 
     @FXML
@@ -50,7 +55,9 @@ public class MainFormController {
         }
 
         bundle = ResourceBundle.getBundle("sudoku");
+        authorBundle = ResourceBundle.getBundle("pl.component.Author");
         initControlls();
+        authorLabel.setText(authorBundle.getString("author"));
     }
 
     public void loadLanguage() {
