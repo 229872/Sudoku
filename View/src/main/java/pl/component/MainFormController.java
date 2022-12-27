@@ -1,6 +1,7 @@
 package pl.component;
 
 import java.io.IOException;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -9,11 +10,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import pl.component.model.main.Difficulty;
 
 public class MainFormController {
-    public Button button;
-    public ChoiceBox<String> chooseDifficultyBox;
+    @FXML
+    private Button button;
+
+    @FXML
+    private ChoiceBox<String> chooseDifficultyBox;
+
+    @FXML
+    private ComboBox<String> chooseLanguageBox;
+
     private ResourceBundle bundle;
 
 
@@ -41,15 +50,45 @@ public class MainFormController {
         }
 
         bundle = ResourceBundle.getBundle("sudoku");
+        initControlls();
+    }
+
+    public void loadLanguage() {
+        switch (chooseLanguageBox.getValue()) {
+            case "Polish":
+                changeLanguage(new Locale("pl"));
+                break;
+            case "English":
+            default:
+                changeLanguage(new Locale("en"));
+                break;
+        }
+    }
+
+    private void turnOnButton(ActionEvent actionEvent) {
+        button.setDisable(false);
+    }
+
+    private void changeLanguage(Locale locale) {
+        Locale.setDefault(locale);
+        try {
+            App.backToMainForm();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void initControlls() {
         chooseDifficultyBox.getItems().addAll(
                 bundle.getString("difficulty.easy"),
                 bundle.getString("difficulty.medium"),
                 bundle.getString("difficulty.hard")
         );
-    }
 
-    private void turnOnButton(ActionEvent actionEvent) {
-        button.setDisable(false);
+        chooseLanguageBox.getItems().addAll(
+                bundle.getString("language.pl"),
+                bundle.getString("language.eng")
+        );
     }
 
 
