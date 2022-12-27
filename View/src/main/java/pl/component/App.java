@@ -1,6 +1,9 @@
 package pl.component;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,7 +15,8 @@ public class App extends Application {
     private static Scene scene;
 
     public static FXMLLoader getFxmlLoader(String fxml) {
-        return new FXMLLoader(App.class.getResource(fxml));
+        return new FXMLLoader(App.class.getResource(fxml),
+                ResourceBundle.getBundle("sudoku"));
     }
 
     @Override
@@ -33,6 +37,7 @@ public class App extends Application {
 
 
     public static void main(String[] args) {
+        Locale.setDefault(new Locale("pl"));
         Application.launch();
     }
 }
