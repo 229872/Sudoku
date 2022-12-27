@@ -6,4 +6,6 @@ module View {
     exports pl.component to javafx.graphics, javafx.fxml;
 
     opens pl.component to javafx.fxml;
+    exports pl.component.author to javafx.fxml, javafx.graphics;
+    opens pl.component.author to javafx.fxml;
 }

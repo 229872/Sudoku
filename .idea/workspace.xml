@@ -83,7 +83,7 @@
       <module name="View" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.component.*" />
+          <option name="PATTERN" value="pl.component.author.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

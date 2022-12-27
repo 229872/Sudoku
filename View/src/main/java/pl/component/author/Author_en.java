@@ -1,4 +1,4 @@
-package pl.component;
+package pl.component.author;
 
 import java.util.ListResourceBundle;
 

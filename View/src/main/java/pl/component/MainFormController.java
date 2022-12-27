@@ -55,7 +55,7 @@ public class MainFormController {
         }
 
         bundle = ResourceBundle.getBundle("sudoku");
-        authorBundle = ResourceBundle.getBundle("pl.component.Author");
+        authorBundle = ResourceBundle.getBundle("pl.component.author.Author");
         initControlls();
         authorLabel.setText(authorBundle.getString("author"));
     }
