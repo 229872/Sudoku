@@ -9,7 +9,7 @@ import pl.component.model.main.SudokuBoard;
 
 public class SudokuBoardFx {
     private final SudokuBoard sudokuBoard;
-    private IntegerProperty[][] properties;
+    private final IntegerProperty[][] properties;
 
 
     public SudokuBoardFx(SudokuBoard sudokuBoard) {

@@ -3,9 +3,6 @@ package pl.component;
 import java.io.IOException;
 
 import javafx.beans.binding.Bindings;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import javafx.beans.property.adapter.JavaBeanStringPropertyBuilder;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -14,7 +11,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.util.StringConverter;
-import javafx.util.converter.NumberStringConverter;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.Difficulty;
 import pl.component.model.main.SudokuBoard;
@@ -59,9 +55,9 @@ public class PlayGameFormController {
                         sudokuBoard.getProperty(i, j), converter);
                 if (textFields[i][j].getText().matches("[1-9]")) {
                     textFields[i][j].setDisable(true);
-                    setVisibleField(textFields[i][j]);
+                    styleAlreadyInsertedField(textFields[i][j]);
                 } else {
-                    setHiddenField(textFields[i][j]);
+                    styleFreeToInsertField(textFields[i][j]);
                 }
                 textFields[i][j].setTextFormatter(new TextFormatter<>(this::filter));
 
@@ -77,14 +73,14 @@ public class PlayGameFormController {
         return change;
     }
 
-    private void setHiddenField(TextField field) {
+    private void styleAlreadyInsertedField(TextField field) {
         field.setMaxSize(100,65);
         field.setFont(Font.font("Comic Sans MS", FontWeight.BOLD, 18));
         field.setStyle("-fx-background-color: #F0EBD7;-fx-alignment: center;"
                 + "-fx-border-style: solid; -fx-opacity: 100%");
     }
 
-    private void setVisibleField(TextField field) {
+    private void styleFreeToInsertField(TextField field) {
         field.setMaxSize(100,65);
         field.setFont(Font.font("Comic Sans MS", FontWeight.BOLD, 18));
         field.setStyle("-fx-background-color: #F0EBD7;-fx-alignment: center;"

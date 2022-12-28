@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/SudokuBoardFx.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/SudokuBoardFx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
     </list>
