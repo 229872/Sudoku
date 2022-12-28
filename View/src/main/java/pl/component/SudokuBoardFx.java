@@ -6,9 +6,11 @@ import pl.component.exceptions.WrongValueException;
 import pl.component.model.main.Difficulty;
 import pl.component.model.main.SudokuBoard;
 
+import java.util.Objects;
+
 
 public class SudokuBoardFx {
-    private final SudokuBoard sudokuBoard;
+    private SudokuBoard sudokuBoard;
     private final IntegerProperty[][] properties;
 
 
@@ -59,5 +61,10 @@ public class SudokuBoardFx {
 
     public IntegerProperty getProperty(int i, int j) {
         return this.properties[i][j];
+    }
+
+    public void setSudokuBoard(SudokuBoard sudokuBoard) {
+        Objects.requireNonNull(sudokuBoard);
+        this.sudokuBoard = sudokuBoard;
     }
 }

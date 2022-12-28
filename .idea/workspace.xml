@@ -8,6 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/SudokuBoardFx.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/SudokuBoardFx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/sudoku.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/sudoku.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/sudoku_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/sudoku_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/sudoku_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/sudoku_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,20 +52,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "17 (3)",
-    "last_opened_file_path": "/home/bartek/Desktop/kompo/sudoku-game-Zadanie11_2",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17 (3)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bartek/Desktop/kompo/sudoku-game-Zadanie11_2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
