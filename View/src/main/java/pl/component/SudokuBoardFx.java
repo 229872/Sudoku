@@ -2,6 +2,7 @@ package pl.component;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import pl.component.exceptions.WrongValueException;
 import pl.component.model.main.Difficulty;
 import pl.component.model.main.SudokuBoard;
 
@@ -19,6 +20,11 @@ public class SudokuBoardFx {
             this.properties[i] = new SimpleIntegerProperty[9];
             for (int j = 0; j < 9; j++) {
                 this.properties[i][j] = new SimpleIntegerProperty();
+                int finalJ = j;
+                int finalI = i;
+                this.properties[i][j].addListener(((observableValue, number, t1) -> {
+                    sudokuBoard.set(finalJ, finalI, t1.intValue());
+                }));
             }
         }
     }
