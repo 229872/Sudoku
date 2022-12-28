@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/MainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/MainFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/PlayGameFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/component/SudokuBoardFx.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/component/SudokuBoardFx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/pl/component/playGameForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/sudoku.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/sudoku.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/sudoku_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/sudoku_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/sudoku_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/sudoku_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

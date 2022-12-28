@@ -1,12 +1,11 @@
 package pl.component;
 
+import java.util.Objects;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import pl.component.exceptions.WrongValueException;
 import pl.component.model.main.Difficulty;
 import pl.component.model.main.SudokuBoard;
 
-import java.util.Objects;
 
 
 public class SudokuBoardFx {

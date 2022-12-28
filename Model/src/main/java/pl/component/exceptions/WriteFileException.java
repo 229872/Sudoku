@@ -1,7 +1,5 @@
 package pl.component.exceptions;
 
-import java.io.IOException;
-
 public class WriteFileException extends RuntimeException {
 
     public WriteFileException() {

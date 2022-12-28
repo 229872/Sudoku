@@ -2,6 +2,7 @@ module View {
     requires ModelProject;
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.slf4j;
 
     exports pl.component to javafx.graphics, javafx.fxml;
 

@@ -3,7 +3,6 @@ package pl.component;
 import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
-
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +16,8 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
 import javafx.util.StringConverter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.component.dao.FileSudokuBoardDao;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.Difficulty;
@@ -28,17 +29,17 @@ public class PlayGameFormController extends Window {
 
     private final SudokuBoardFx sudokuBoard =
             new SudokuBoardFx(board);
+
+    private TextField[][] textFields = new TextField[9][9];
+    private final StringConverter<Number> converter = new SudokuFieldConverter();
+    private final ResourceBundle bundle = ResourceBundle.getBundle("sudoku");
+    private static final Logger logger = LoggerFactory.getLogger(SudokuBoard.class);
+
     @FXML
     private GridPane sudokuBoardGrid;
 
     @FXML
     private Button backButton;
-
-    private TextField[][] textFields = new TextField[9][9];
-    private final StringConverter<Number> converter = new SudokuFieldConverter();
-    private final ResourceBundle bundle = ResourceBundle.getBundle("sudoku");
-
-
 
 
     public void setDifficultyLevel(Difficulty difficulty) {
@@ -108,9 +109,11 @@ public class PlayGameFormController extends Window {
             this.sudokuBoard.setSudokuBoard(board);
             this.sudokuBoard.init();
             fillGrid();
+            logger.debug("Loaded dao");
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, bundle.getString("error.load"));
             alert.showAndWait();
+            logger.debug("Couldn't load dao");
         }
 
     }
@@ -123,9 +126,11 @@ public class PlayGameFormController extends Window {
         try (FileSudokuBoardDao dao =
                      new FileSudokuBoardDao(file.getAbsolutePath())) {
             dao.write(board);
+            logger.debug("Saved dao");
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, bundle.getString("error.save"));
             alert.showAndWait();
+            logger.debug("Couldn't save dao");
         }
     }
 }

@@ -3,7 +3,6 @@ package pl.component;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,7 +38,8 @@ public class MainFormController {
 
         switch (chooseDifficultyBox.getValue()) {
             case "Easy", "Łatwy" -> playGameFormController.setDifficultyLevel(Difficulty.EASY);
-            case "Medium", "Normalny" -> playGameFormController.setDifficultyLevel(Difficulty.MEDIUM);
+            case "Medium", "Normalny" ->
+                    playGameFormController.setDifficultyLevel(Difficulty.MEDIUM);
             case "Hard", "Trudny" -> playGameFormController.setDifficultyLevel(Difficulty.HARD);
             default -> throw new RuntimeException("No option");
         }
