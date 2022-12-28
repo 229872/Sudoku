@@ -1,33 +1,34 @@
 package pl.component;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.Difficulty;
 import pl.component.model.main.SudokuBoard;
 
 public class SudokuBoardFx {
-    private SudokuBoard sudokuBoard;
+    private final SudokuBoard sudokuBoard;
 
-    private IntegerProperty[] sudokuBoardProperty;
 
-    public SudokuBoardFx() {
-        sudokuBoard = new SudokuBoard(new BacktrackingSudokuSolver());
-        sudokuBoardProperty = new SimpleIntegerProperty[81];
+    public SudokuBoardFx(SudokuBoard sudokuBoard) {
+        this.sudokuBoard = sudokuBoard;
     }
 
     public void setDifficultyLevel(Difficulty difficultyLevel) {
         this.sudokuBoard.setDifficultyLevel(difficultyLevel);
     }
 
-    public void startGame() {
+    public void solveGame() {
         this.sudokuBoard.solveGame();
+    }
+
+    public void deleteFields() {
         this.sudokuBoard.deleteFields();
     }
 
-    public IntegerProperty[] getSudokuBoardProperty() {
-        return sudokuBoardProperty;
+    public int get(int x, int y) {
+        return this.sudokuBoard.get(x, y);
     }
+
+    public void set(int x, int y, int value) {
+        this.sudokuBoard.set(x, y, value);
+    }
+
 }

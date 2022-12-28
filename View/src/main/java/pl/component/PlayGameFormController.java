@@ -16,7 +16,8 @@ import pl.component.model.main.SudokuBoard;
 
 public class PlayGameFormController {
 
-    private final SudokuBoard sudokuBoard = new SudokuBoard(new BacktrackingSudokuSolver());
+    private final SudokuBoardFx sudokuBoard =
+            new SudokuBoardFx(new SudokuBoard(new BacktrackingSudokuSolver()));
     public GridPane sudokuBoardGrid;
     public Button backButton;
 
