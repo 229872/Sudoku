@@ -1,6 +1,7 @@
 package pl.component.dao;
 
 import org.apache.commons.lang3.NotImplementedException;
+import pl.component.exceptions.JDBCConnectionErrorException;
 import pl.component.model.main.SudokuBoard;
 
 import java.sql.*;
@@ -13,18 +14,19 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
     private static final ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
     private final Connection connection;
 
-    public JdbcSudokuBoardDao() throws ClassNotFoundException {
+    public JdbcSudokuBoardDao() {
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(URL, "kompo", "password");
             connection.setAutoCommit(false);
+            createTables();
         } catch (ClassNotFoundException | SQLException e) {
-            //FIxme add exception
-            throw new ClassNotFoundException();
+            throw new JDBCConnectionErrorException(
+                    bundle.getString("exception.create"), e);
         }
     }
 
-    public void createTables() throws SQLException {
+    private void createTables() throws SQLException {
         try (Statement jdbcStatement = connection.createStatement()) {
             String boardTables =
                     "CREATE TABLE BOARDS(BOARD_ID int PRIMARY KEY AUTO_INCREMENT,"
