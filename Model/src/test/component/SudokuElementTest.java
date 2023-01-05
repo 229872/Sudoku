@@ -1,3 +1,5 @@
+package component;
+
 import org.junit.jupiter.api.Test;
 import pl.component.exceptions.WrongValueException;
 import pl.component.model.elements.SudokuBox;

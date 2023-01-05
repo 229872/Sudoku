@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  db:
+  kompo:
     image: postgres:14
     environment:
       POSTGRES_DB: kompo
@@ -10,6 +10,6 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - pg:/var/lib/postgresql/data
+      - pg:/var/kompo
 volumes:
   pg:

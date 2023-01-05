@@ -1,3 +1,5 @@
+package component;
+
 import org.junit.jupiter.api.Test;
 import pl.component.model.main.SudokuField;
 
