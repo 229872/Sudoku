@@ -1,6 +1,5 @@
 package pl.component.dao;
 
-import org.apache.commons.lang3.NotImplementedException;
 import pl.component.model.main.SudokuBoard;
 
 public class SudokuBoardDaoFactory {
