@@ -2,7 +2,6 @@ package component;
 
 import org.junit.jupiter.api.Test;
 import pl.component.dao.Dao;
-import pl.component.dao.JdbcSudokuBoardDao;
 import pl.component.dao.SudokuBoardDaoFactory;
 import pl.component.exceptions.JDBCConnectionErrorException;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
