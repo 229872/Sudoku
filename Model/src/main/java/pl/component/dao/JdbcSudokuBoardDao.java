@@ -2,7 +2,9 @@ package pl.component.dao;
 
 import org.apache.commons.lang3.NotImplementedException;
 import pl.component.exceptions.JDBCConnectionErrorException;
+import pl.component.exceptions.ReadDatabaseException;
 import pl.component.exceptions.WriteDatabaseException;
+import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.SudokuBoard;
 
 import java.sql.*;
@@ -48,35 +50,43 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
 
     @Override
     public SudokuBoard read() {
-        throw new NotImplementedException();
+        SudokuBoard newBoard = new SudokuBoard(new BacktrackingSudokuSolver());
+        try (PreparedStatement preparedStatement = connection.prepareStatement(
+                "SELECT X, Y, VALUE FROM FIELDS WHERE BOARD_ID=?"
+        )) {
+
+            preparedStatement.setLong(1, findIdByName(this.boardName));
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    newBoard.set(
+                            resultSet.getInt(1),
+                            resultSet.getInt(2),
+                            resultSet.getInt(3)
+                    );
+                }
+                connection.commit();
+            }
+        } catch (SQLException e) {
+            throw new ReadDatabaseException(
+                    bundle.getString("FileSudokuBoardDao.exception.read.message"),
+                    e);
+        }
+        return newBoard;
     }
 
     @Override
     public void write(SudokuBoard obj) {
         try {
             insertIntoBoardTable();
-            long fieldId = findIdByName(this.boardName);
-            insertIntoFieldsTable(fieldId, obj);
+            long boardId = findIdByName(this.boardName);
+            insertIntoFieldsTable(boardId, obj);
         } catch (SQLException e) {
             throw new WriteDatabaseException(
                     bundle.getString("FileSudokuBoardDao.exception.write.message"),
                     e);
         }
 
-    }
-
-    @Override
-    public void close() throws Exception {
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            throw new Exception(
-                    bundle.getString("FileSudokuBoardDao.exception.error.message"), e);
-        }
-    }
-
-    public String getBoardName() {
-        return boardName;
     }
 
     private void insertIntoBoardTable() throws SQLException {
@@ -90,7 +100,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
         }
     }
 
-    private void insertIntoFieldsTable(long fieldId, SudokuBoard board) throws SQLException {
+    private void insertIntoFieldsTable(long boardId, SudokuBoard board) throws SQLException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 "INSERT INTO FIELDS VALUES(?, ?, ?, ?)"
         )) {
@@ -100,7 +110,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
                     preparedStatement.setInt(1, j);
                     preparedStatement.setInt(2, i);
                     preparedStatement.setInt(3, board.get(j, i));
-                    preparedStatement.setLong(4, fieldId);
+                    preparedStatement.setLong(4, boardId);
                 }
             }
 
@@ -125,5 +135,19 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
             connection.rollback();
         }
         throw new SQLException();
+    }
+
+    @Override
+    public void close() throws Exception {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            throw new Exception(
+                    bundle.getString("FileSudokuBoardDao.exception.error.message"), e);
+        }
+    }
+
+    public String getBoardName() {
+        return boardName;
     }
 }
