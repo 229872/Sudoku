@@ -8,6 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/Model/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/JdbcSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/JdbcSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/JDBCConnectionErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/JdbcConnectionErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/ReadDatabaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/ReadDatabaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/WriteDatabaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/WriteDatabaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/component/JdbcSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/component/JdbcSudokuBoardDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcSudokuBoardDaoTest.createDataBaseNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JdbcSudokuBoardDaoTest.ma" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
       <extension name="coverage">
         <pattern>
@@ -115,13 +119,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="component" />
       <option name="MAIN_CLASS_NAME" value="component.JdbcSudokuBoardDaoTest" />
-      <option name="METHOD_NAME" value="createDataBaseNegativeTest" />
+      <option name="METHOD_NAME" value="ma" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcSudokuBoardDaoTest.createDataBasePositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JdbcSudokuBoardDaoTest.readWriteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
       <extension name="coverage">
         <pattern>
@@ -131,7 +135,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="component" />
       <option name="MAIN_CLASS_NAME" value="component.JdbcSudokuBoardDaoTest" />
-      <option name="METHOD_NAME" value="createDataBasePositiveTest" />
+      <option name="METHOD_NAME" value="readWriteTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,8 +180,8 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in ModelProject" />
-      <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseNegativeTest" />
-      <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBasePositiveTest" />
+      <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.ma" />
+      <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.readWriteTest" />
       <item itemvalue="JUnit.component in ModelProject" />
       <item itemvalue="JUnit.JdbcSudokuBoardDaoTest" />
       <item itemvalue="Maven.Sudoku" />
@@ -185,10 +189,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.component in ModelProject" />
-        <item itemvalue="JUnit.All in ModelProject" />
+        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.readWriteTest" />
         <item itemvalue="JUnit.JdbcSudokuBoardDaoTest" />
-        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseNegativeTest" />
-        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBasePositiveTest" />
+        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.ma" />
+        <item itemvalue="JUnit.All in ModelProject" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +206,7 @@
       <updated>1665596201455</updated>
       <workItem from="1672872929193" duration="464000" />
       <workItem from="1672873800740" duration="2508000" />
-      <workItem from="1672917111151" duration="11995000" />
+      <workItem from="1672917111151" duration="14206000" />
     </task>
     <servers />
   </component>

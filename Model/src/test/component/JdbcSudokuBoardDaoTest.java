@@ -3,10 +3,9 @@ package component;
 import org.junit.jupiter.api.Test;
 import pl.component.dao.Dao;
 import pl.component.dao.SudokuBoardDaoFactory;
-import pl.component.exceptions.JDBCConnectionErrorException;
+import pl.component.exceptions.JdbcConnectionErrorException;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.SudokuBoard;
-
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -28,8 +27,23 @@ public class JdbcSudokuBoardDaoTest {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (Exception e) {
-            assertEquals(e.getClass(), JDBCConnectionErrorException.class);
+            assertEquals(e.getClass(), JdbcConnectionErrorException.class);
             assertEquals(e.getMessage(), "Could not create database");
+        }
+    }
+
+    @Test
+    public void readWriteTest() {
+        try (Dao<SudokuBoard> dao =
+                SudokuBoardDaoFactory.getJdbcDao("kompo", boardName)) {
+            board.set(0, 0, 1);
+            dao.write(board);
+
+            SudokuBoard readBoard = dao.read();
+            assertEquals(board, readBoard);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }

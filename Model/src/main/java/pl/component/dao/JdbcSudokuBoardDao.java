@@ -1,14 +1,19 @@
 package pl.component.dao;
 
-import org.apache.commons.lang3.NotImplementedException;
-import pl.component.exceptions.JDBCConnectionErrorException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ResourceBundle;
+import pl.component.exceptions.JdbcConnectionErrorException;
 import pl.component.exceptions.ReadDatabaseException;
 import pl.component.exceptions.WriteDatabaseException;
 import pl.component.model.algorithm.BacktrackingSudokuSolver;
 import pl.component.model.main.SudokuBoard;
 
-import java.sql.*;
-import java.util.ResourceBundle;
+
 
 
 public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
@@ -26,7 +31,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
             connection.setAutoCommit(false);
             createTables();
         } catch (ClassNotFoundException | SQLException e) {
-            throw new JDBCConnectionErrorException(
+            throw new JdbcConnectionErrorException(
                     bundle.getString("JDBCSudokuBoardDao.exception.create.message"),
                     e);
         }
@@ -111,6 +116,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
                     preparedStatement.setInt(2, i);
                     preparedStatement.setInt(3, board.get(j, i));
                     preparedStatement.setLong(4, boardId);
+                    preparedStatement.executeUpdate();
                 }
             }
 
