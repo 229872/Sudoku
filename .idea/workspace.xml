@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/JDBCConnectionErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f/storage_v2/_src_/database/kompo.SO8XBg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f/storage_v2/_src_/database/kompo.SO8XBg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/Model/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/JdbcSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/JdbcSudokuBoardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/SudokuBoardDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/SudokuBoardDaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/component/JdbcSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/component/JdbcSudokuBoardDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +85,7 @@
       <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JdbcSudokuBoardDaoTest.createDataBaseTest (1)">
+  <component name="RunManager" selected="JUnit.JdbcSudokuBoardDaoTest">
     <configuration name="All in ModelProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -93,9 +96,47 @@
     </configuration>
     <configuration name="JdbcSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JdbcSudokuBoardDaoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="component" />
+      <option name="MAIN_CLASS_NAME" value="component.JdbcSudokuBoardDaoTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcSudokuBoardDaoTest.createDataBaseNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="component" />
+      <option name="MAIN_CLASS_NAME" value="component.JdbcSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="createDataBaseNegativeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcSudokuBoardDaoTest.createDataBasePositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="component.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="component" />
+      <option name="MAIN_CLASS_NAME" value="component.JdbcSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="createDataBasePositiveTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,25 +153,6 @@
       <option name="MAIN_CLASS_NAME" value="component.JdbcSudokuBoardDaoTest" />
       <option name="METHOD_NAME" value="createDataBaseTest" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JdbcSudokuBoardDaoTest.createDataBaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ModelProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JdbcSudokuBoardDaoTest" />
-      <option name="METHOD_NAME" value="createDataBaseTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ModelProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,19 +182,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in ModelProject" />
+      <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseNegativeTest" />
+      <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBasePositiveTest" />
       <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseTest (1)" />
       <item itemvalue="JUnit.JdbcSudokuBoardDaoTest" />
-      <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseTest" />
-      <item itemvalue="JUnit.SudokuBoardTest" />
       <item itemvalue="Maven.Sudoku" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseNegativeTest" />
+        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBasePositiveTest" />
         <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseTest (1)" />
         <item itemvalue="JUnit.All in ModelProject" />
-        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseTest" />
-        <item itemvalue="JUnit.JdbcSudokuBoardDaoTest" />
-        <item itemvalue="JUnit.SudokuBoardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +208,7 @@
       <updated>1665596201455</updated>
       <workItem from="1672872929193" duration="464000" />
       <workItem from="1672873800740" duration="2508000" />
-      <workItem from="1672917111151" duration="3611000" />
+      <workItem from="1672917111151" duration="5758000" />
     </task>
     <servers />
   </component>

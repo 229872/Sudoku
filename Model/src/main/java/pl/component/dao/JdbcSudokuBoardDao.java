@@ -9,15 +9,15 @@ import java.util.ResourceBundle;
 
 
 public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
-    private static final String URL = "jdbc:postgresql://localhost:5432/kompo";
+    private static final String URL = "jdbc:postgresql://localhost:5432/";
     private static final String DRIVER = "org.postgresql.Driver";
     private static final ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
     private final Connection connection;
 
-    public JdbcSudokuBoardDao() {
+    public JdbcSudokuBoardDao(String dataBaseName) {
         try {
             Class.forName(DRIVER);
-            connection = DriverManager.getConnection(URL, "kompo", "password");
+            connection = DriverManager.getConnection(URL + dataBaseName, "kompo", "password");
             connection.setAutoCommit(false);
             createTables();
         } catch (ClassNotFoundException | SQLException e) {
