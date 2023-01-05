@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05f2c9ff-df0d-407a-8cca-c0acfe83b8b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f/storage_v2/_src_/database/kompo.SO8XBg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7bf31694-12c4-44f1-95ea-31eea4004e3f/storage_v2/_src_/database/kompo.SO8XBg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/ReadDatabaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/exceptions/WriteDatabaseException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/Model/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/JdbcSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/JdbcSudokuBoardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/SudokuBoardDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/component/dao/SudokuBoardDaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/bundles/exceptions.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/bundles/exceptions.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/bundles/exceptions_eng.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/bundles/exceptions_eng.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/bundles/exceptions_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/bundles/exceptions_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/test/component/JdbcSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/component/JdbcSudokuBoardDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
     </list>
@@ -85,7 +88,7 @@
       <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JdbcSudokuBoardDaoTest">
+  <component name="RunManager" selected="JUnit.All in ModelProject">
     <configuration name="All in ModelProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -190,11 +193,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in ModelProject" />
         <item itemvalue="JUnit.JdbcSudokuBoardDaoTest" />
         <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseNegativeTest" />
         <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBasePositiveTest" />
         <item itemvalue="JUnit.JdbcSudokuBoardDaoTest.createDataBaseTest (1)" />
-        <item itemvalue="JUnit.All in ModelProject" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +211,7 @@
       <updated>1665596201455</updated>
       <workItem from="1672872929193" duration="464000" />
       <workItem from="1672873800740" duration="2508000" />
-      <workItem from="1672917111151" duration="5758000" />
+      <workItem from="1672917111151" duration="8134000" />
     </task>
     <servers />
   </component>

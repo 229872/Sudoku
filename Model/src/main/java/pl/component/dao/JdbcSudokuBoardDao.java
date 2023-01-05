@@ -2,6 +2,7 @@ package pl.component.dao;
 
 import org.apache.commons.lang3.NotImplementedException;
 import pl.component.exceptions.JDBCConnectionErrorException;
+import pl.component.exceptions.WriteDatabaseException;
 import pl.component.model.main.SudokuBoard;
 
 import java.sql.*;
@@ -13,8 +14,10 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
     private static final String DRIVER = "org.postgresql.Driver";
     private static final ResourceBundle bundle = ResourceBundle.getBundle("bundles/exceptions");
     private final Connection connection;
+    private final String boardName;
 
-    public JdbcSudokuBoardDao(String dataBaseName) {
+    public JdbcSudokuBoardDao(String dataBaseName, String boardName) {
+        this.boardName = boardName;
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(URL + dataBaseName, "kompo", "password");
@@ -22,7 +25,8 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
             createTables();
         } catch (ClassNotFoundException | SQLException e) {
             throw new JDBCConnectionErrorException(
-                    bundle.getString("exception.create"), e);
+                    bundle.getString("JDBCSudokuBoardDao.exception.create.message"),
+                    e);
         }
     }
 
@@ -49,7 +53,14 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
 
     @Override
     public void write(SudokuBoard obj) {
-        throw new NotImplementedException();
+        try {
+            insertToBoardTable();
+        } catch (SQLException e) {
+            throw new WriteDatabaseException(
+                    bundle.getString("FileSudokuBoardDao.exception.write.message"),
+                    e);
+        }
+
     }
 
     @Override
@@ -59,6 +70,21 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard> {
         } catch (SQLException e) {
             throw new Exception(
                     bundle.getString("FileSudokuBoardDao.exception.write.message"), e);
+        }
+    }
+
+    public String getBoardName() {
+        return boardName;
+    }
+
+    private void insertToBoardTable() throws SQLException {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(
+                "INSERT INTO BOARDS (BOARD_NAME) VALUES (?)"
+        )) {
+            preparedStatement.setString(1, this.boardName);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            connection.rollback();
         }
     }
 }

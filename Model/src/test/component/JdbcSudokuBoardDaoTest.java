@@ -13,15 +13,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JdbcSudokuBoardDaoTest {
     private SudokuBoard board = new SudokuBoard(new BacktrackingSudokuSolver());
+    private String boardName = "test";
 
     @Test
     public void createDataBasePositiveTest() {
-        assertDoesNotThrow(() -> SudokuBoardDaoFactory.getJdbcDao("kompo"));
+        assertDoesNotThrow(() ->
+                SudokuBoardDaoFactory.getJdbcDao("kompo", boardName));
     }
 
     @Test
     public void createDataBaseNegativeTest() {
-        try (Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getJdbcDao("wrongOne")) {
+        try (Dao<SudokuBoard> dao =
+                     SudokuBoardDaoFactory.getJdbcDao("wrongOne", boardName)) {
             //ignore
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
